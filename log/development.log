@@ -7523,3 +7523,356 @@ Processing by WelcomeController#index as HTML
   Rendered welcome/index.html.erb within layouts/application (2.3ms)
   [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
 Completed 200 OK in 185ms (Views: 183.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-03-04 16:43:55 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (30.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.4ms)
+  [1m[35mUser Load (12.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+Completed 200 OK in 1196ms (Views: 1134.0ms | ActiveRecord: 13.4ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-03-04 16:44:04 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"6goQUUYHX8anreXTnOtyjkA1ilng6TOsj/OhNFn70jvjSe9O62f3nv5PQRdCHxH9WtOp6xok34wvWF0KynpFrg=="}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 185ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-03-04 16:44:04 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 104ms (Views: 103.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-03-04 16:44:09 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (26.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (185.9ms)
+Completed 200 OK in 305ms (Views: 302.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-03-04 16:44:14 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UvF+W6qjuJjmdlSX6nJpKYrnOQOsQ6k/jIsUvRQG0BufCjYoADDxAiGsePtgGbqTFzY2KOnHew4G3x3+OMMIeg==", "user"=>{"email"=>"ekeast328@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (11.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "ekeast328@gmail.com"]]
+Completed 401 Unauthorized in 29ms (ActiveRecord: 11.9ms)
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UvF+W6qjuJjmdlSX6nJpKYrnOQOsQ6k/jIsUvRQG0BufCjYoADDxAiGsePtgGbqTFzY2KOnHew4G3x3+OMMIeg==", "user"=>{"email"=>"ekeast328@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendered devise/shared/_links.html.erb (10.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (30.5ms)
+Completed 200 OK in 227ms (Views: 75.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-03-04 16:44:17 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lUSigqViazTXGktfjzyzkCineiSzlTP5gJ4+qjMwm6pYv+rxD/EirhDAZzMFV2AqtXZ1D/YR4cgKyjfpH/VDyw==", "user"=>{"email"=>"ekeast328@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "ekeast328@gmail.com"]]
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.2ms)
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lUSigqViazTXGktfjzyzkCineiSzlTP5gJ4+qjMwm6pYv+rxD/EirhDAZzMFV2AqtXZ1D/YR4cgKyjfpH/VDyw==", "user"=>{"email"=>"ekeast328@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendered devise/shared/_links.html.erb (11.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 162ms (Views: 62.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-03-04 16:44:28 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EByM0hxndq/oRKQiCGKIWc6GRvER+x7fEr+v/yMFve7d58ShtvQ/NS+eiE6CCVvjU1dJ2lR/zO6Y66a8D8Bljw==", "user"=>{"email"=>"ekeast328+testingsignup@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "ekeast328+testingsignup@gmail.com"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  UPDATE "users" SET "remember_created_at" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["remember_created_at", "2016-03-04 21:44:29.108780"], ["updated_at", "2016-03-04 21:44:29.109537"], ["id", 2]]
+  [1m[36m (44.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2016-03-04 19:37:59.103926"], ["current_sign_in_at", "2016-03-04 21:44:29.188241"], ["sign_in_count", 3], ["updated_at", "2016-03-04 21:44:29.199070"], ["id", 2]]
+  [1m[35m (5.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 242ms (ActiveRecord: 51.6ms)
+
+
+Started GET "/" for ::1 at 2016-03-04 16:44:29 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 94ms (Views: 93.4ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-03-04 16:44:36 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Z1wsRGZAZmF4tkiGjlZMAcH5z8o2PAR2nJcuxoPLE9Go2Pcc0+eBL/XN7pD0ATtyEXoSH42J9I8dUH6et/cC/A=="}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  UPDATE "users" SET "remember_created_at" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["remember_created_at", nil], ["updated_at", "2016-03-04 21:44:36.100294"], ["id", 2]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 25ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/" for ::1 at 2016-03-04 16:44:36 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 61ms (Views: 60.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-03-04 16:44:38 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (14.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (76.8ms)
+Completed 200 OK in 1219ms (Views: 1217.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-03-04 16:44:44 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iUEdQsvKDOYsZojUaAGk/EifeatAsvSExu+xNkLLJZshGT31tmuKn4XNKiimvHbxpDcLfeQnqXpMtjY19/srwQ==", "user"=>{"email"=>"ekeast328+testingsignup@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "ekeast328+testingsignup@gmail.com"]]
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2016-03-04 21:44:29.188241"], ["current_sign_in_at", "2016-03-04 21:44:44.905603"], ["sign_in_count", 4], ["updated_at", "2016-03-04 21:44:44.907576"], ["id", 2]]
+  [1m[36m (30.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 143ms (ActiveRecord: 31.6ms)
+
+
+Started GET "/" for ::1 at 2016-03-04 16:44:44 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+Completed 200 OK in 46ms (Views: 45.2ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-03-04 16:44:47 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"476up+A/+KHMQ0JpN39pQ0MpRs3JcuqlY+3wWLbYHV/fvffswRRiavqSqgXPO6INPKCjkF0vEAfQuzOpg/uWug=="}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-03-04 16:44:47 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 46ms (Views: 44.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-03-04 16:44:48 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (12.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (42.9ms)
+Completed 200 OK in 136ms (Views: 115.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/new" for ::1 at 2016-03-04 16:44:53 -0500
+Processing by Devise::PasswordsController#new as HTML
+  Rendered devise/shared/_links.html.erb (16.2ms)
+  Rendered devise/passwords/new.html.erb within layouts/application (29.4ms)
+Completed 200 OK in 109ms (Views: 107.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/password" for ::1 at 2016-03-04 16:44:59 -0500
+Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dkCkbyJiwgAluAbKfhdSfV+ViwVfiNxNGASOeATPLf6wlTlaLRU8o59piDhjAfOYyXJkEz9e8g+r9upqkiQCww==", "user"=>{"username"=>"ekeast", "email"=>"ekeast328+testingsignup@gmail.com"}, "commit"=>"Send me reset password instructions"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "ekeast328+testingsignup@gmail.com"]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."reset_password_token" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["reset_password_token", "11d33a518f955eed11dcee262dbfbc462351143c113fc2d70de2748b71449811"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mUPDATE "users" SET "reset_password_token" = ?, "reset_password_sent_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["reset_password_token", "11d33a518f955eed11dcee262dbfbc462351143c113fc2d70de2748b71449811"], ["reset_password_sent_at", "2016-03-04 21:45:00.353859"], ["updated_at", "2016-03-04 21:45:00.354478"], ["id", 2]]
+  [1m[35m (25.0ms)[0m  commit transaction
+  Rendered devise/mailer/reset_password_instructions.html.erb (19.3ms)
+
+Devise::Mailer#reset_password_instructions: processed outbound mail in 535.9ms
+
+Sent mail to ekeast328+testingsignup@gmail.com (687.3ms)
+Date: Fri, 04 Mar 2016 16:45:01 -0500
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: ekeast328+testingsignup@gmail.com
+Message-ID: <56da01dd3b62_18073ff762348f20784b6@adminsMacBook2.home.mail>
+Subject: Reset password instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Hello ekeast328+testingsignup@gmail.com!</p>
+
+<p>Someone has requested a link to change your password. You can do this through the link below.</p>
+
+<p><a href="http://localhost:3000/users/password/edit?reset_password_token=gvMyNML-XUhtSQZzzZot">Change my password</a></p>
+
+<p>If you didn't request this, please ignore this email.</p>
+<p>Your password won't change until you access the link above and create a new one.</p>
+
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 1740ms (ActiveRecord: 26.6ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-03-04 16:45:01 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (10.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 79ms (Views: 76.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-03-04 16:45:07 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 182ms (Views: 175.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/edit?reset_password_token=[FILTERED]" for ::1 at 2016-03-04 16:48:06 -0500
+Processing by Devise::PasswordsController#edit as HTML
+  Parameters: {"reset_password_token"=>"[FILTERED]"}
+  Rendered devise/shared/_links.html.erb (13.4ms)
+  Rendered devise/passwords/edit.html.erb within layouts/application (169.4ms)
+Completed 200 OK in 485ms (Views: 473.9ms | ActiveRecord: 0.0ms)
+
+
+Started PUT "/users/password" for ::1 at 2016-03-04 16:48:16 -0500
+Processing by Devise::PasswordsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9wLDncfRgPgH7KvHzNBIUOmn82b+TA3jl1SeJWmiWUUx116oyKZ+W709JTXRxum1f0AccJ6aI6Ekpvo3/0l2eA==", "user"=>{"reset_password_token"=>"[FILTERED]", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Change my password"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."reset_password_token" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["reset_password_token", "44852962ba8f766c4d5e45870b9400d9e7f5b7eee146a21716a8c7141b67ca12"]]
+  Rendered devise/shared/_links.html.erb (17.5ms)
+  Rendered devise/passwords/edit.html.erb within layouts/application (50.1ms)
+Completed 200 OK in 230ms (Views: 185.6ms | ActiveRecord: 0.7ms)
+
+
+Started PUT "/users/password" for ::1 at 2016-03-04 16:48:32 -0500
+Processing by Devise::PasswordsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cldsrI/UfdMfqTNnJnWUK4mQ0RI4O23gDO4No61GHS60gvGZgKODcKV4vZU7YzXOH3c+BFjtQ6K/HGmxO60yEw==", "user"=>{"reset_password_token"=>"[FILTERED]", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Change my password"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."reset_password_token" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["reset_password_token", "44852962ba8f766c4d5e45870b9400d9e7f5b7eee146a21716a8c7141b67ca12"]]
+  Rendered devise/shared/_links.html.erb (12.0ms)
+  Rendered devise/passwords/edit.html.erb within layouts/application (33.1ms)
+Completed 200 OK in 151ms (Views: 136.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-03-04 16:48:36 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 63ms (Views: 62.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-03-04 16:48:39 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (12.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (21.9ms)
+Completed 200 OK in 74ms (Views: 71.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/new" for ::1 at 2016-03-04 16:48:42 -0500
+Processing by Devise::PasswordsController#new as HTML
+  Rendered devise/shared/_links.html.erb (11.5ms)
+  Rendered devise/passwords/new.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 85ms (Views: 83.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/password" for ::1 at 2016-03-04 16:48:49 -0500
+Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CTIDaRAdIPMprc648Zjw3qbXKoQEa6PxGj28aM1sf5bP555cH2reUJN8QErsjlE7MDDFkmS9jbOpz9h6W4dQqw==", "user"=>{"username"=>"ekeast328@gmail.com", "email"=>""}, "commit"=>"Send me reset password instructions"}
+  Rendered devise/shared/_links.html.erb (11.1ms)
+  Rendered devise/passwords/new.html.erb within layouts/application (22.6ms)
+Completed 200 OK in 86ms (Views: 74.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/password" for ::1 at 2016-03-04 16:49:07 -0500
+Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cvRaU7Jij5GfjTP43PSrTCXvemYDKFkmsHL23qKYzZq0IcdmvRVxMiVcvQrB4gqpswiVcGP+d2QDgJLMNHPipw==", "user"=>{"username"=>"ekeast", "email"=>"ekeast328+testingsignup@gmail.com"}, "commit"=>"Send me reset password instructions"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "ekeast328+testingsignup@gmail.com"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."reset_password_token" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["reset_password_token", "509198192c196d7ef17ae2bbbadabfe4c0930ceb8f8487d13c353df25cd11aee"]]
+  [1m[36m (0.8ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "users" SET "reset_password_token" = ?, "reset_password_sent_at" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["reset_password_token", "509198192c196d7ef17ae2bbbadabfe4c0930ceb8f8487d13c353df25cd11aee"], ["reset_password_sent_at", "2016-03-04 21:49:07.411465"], ["updated_at", "2016-03-04 21:49:07.413393"], ["id", 2]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  Rendered devise/mailer/reset_password_instructions.html.erb (4.7ms)
+
+Devise::Mailer#reset_password_instructions: processed outbound mail in 150.6ms
+
+Sent mail to ekeast328+testingsignup@gmail.com (360.8ms)
+Date: Fri, 04 Mar 2016 16:49:07 -0500
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: ekeast328+testingsignup@gmail.com
+Message-ID: <56da02d38cdde_18073ff765f411587851f@adminsMacBook2.home.mail>
+Subject: Reset password instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Hello ekeast328+testingsignup@gmail.com!</p>
+
+<p>Someone has requested a link to change your password. You can do this through the link below.</p>
+
+<p><a href="http://localhost:3000/users/password/edit?reset_password_token=dRuxJx9QMbyNDdbUvi5p">Change my password</a></p>
+
+<p>If you didn't request this, please ignore this email.</p>
+<p>Your password won't change until you access the link above and create a new one.</p>
+
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 544ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-03-04 16:49:07 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (11.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 94ms (Views: 92.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/edit?reset_password_token=[FILTERED]" for ::1 at 2016-03-04 16:49:30 -0500
+Processing by Devise::PasswordsController#edit as HTML
+  Parameters: {"reset_password_token"=>"[FILTERED]"}
+  Rendered devise/shared/_links.html.erb (12.7ms)
+  Rendered devise/passwords/edit.html.erb within layouts/application (53.8ms)
+Completed 200 OK in 136ms (Views: 133.2ms | ActiveRecord: 0.0ms)
+
+
+Started PUT "/users/password" for ::1 at 2016-03-04 16:49:43 -0500
+Processing by Devise::PasswordsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nPmiGxDvaK8cCceAbmCvK7SZeVB6iJ1ljApdzyNh+3xaLD8uH5iWDKbYSXJzdg7OIn6WRhpesyc/+DndtYrUQQ==", "user"=>{"reset_password_token"=>"[FILTERED]", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Change my password"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."reset_password_token" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["reset_password_token", "509198192c196d7ef17ae2bbbadabfe4c0930ceb8f8487d13c353df25cd11aee"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "users" SET "encrypted_password" = ?, "updated_at" = ?, "reset_password_token" = ?, "reset_password_sent_at" = ? WHERE "users"."id" = ?  [["encrypted_password", "$2a$10$Li4BJ7PdNUuG6lT5DT7t8Or3C8HPTeKxL1THgOhq/3AU//gr2rYlS"], ["updated_at", "2016-03-04 21:49:43.346420"], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["id", 2]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2016-03-04 21:44:44.905603"], ["current_sign_in_at", "2016-03-04 21:49:43.354237"], ["sign_in_count", 5], ["updated_at", "2016-03-04 21:49:43.357605"], ["id", 2]]
+  [1m[35m (1.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 150ms (ActiveRecord: 5.3ms)
+
+
+Started GET "/" for ::1 at 2016-03-04 16:49:43 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 82ms (Views: 80.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/edit" for ::1 at 2016-03-04 16:49:47 -0500
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered devise/registrations/edit.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 160ms (Views: 155.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/edit" for ::1 at 2016-03-04 16:57:57 -0500
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered devise/registrations/edit.html.erb within layouts/application (30.2ms)
+Completed 200 OK in 266ms (Views: 250.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/edit" for ::1 at 2016-03-04 16:58:02 -0500
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered devise/registrations/edit.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 73ms (Views: 69.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-03-04 16:58:07 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 58ms (Views: 56.8ms | ActiveRecord: 0.2ms)
