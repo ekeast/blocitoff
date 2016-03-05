@@ -7876,3 +7876,1884 @@ Processing by WelcomeController#index as HTML
   Rendered welcome/index.html.erb within layouts/application (0.1ms)
   [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
 Completed 200 OK in 58ms (Views: 56.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-03-04 18:29:35 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.6ms)
+  [1m[35mUser Load (8.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+Completed 200 OK in 8991ms (Views: 8884.8ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/assets/users.self-e0a657d9157153189196b9e4d8d5d19b9c1f4ceb3f9f94bde19e5c1edd6e3474.css?body=1" for ::1 at 2016-03-04 18:29:46 -0500
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-03-04 18:29:52 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"pobiTEEcHFeSO3YoNMUstEXPwmuIuK6h77RhMtmBOzlgU395Tmvi9Cjq+Nop041R0ygtfehugONcRgUgT2oUBA=="}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 222ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2016-03-04 18:29:53 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 254ms (Views: 247.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-03-04 18:29:57 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (31.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (190.3ms)
+Completed 200 OK in 342ms (Views: 338.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-03-04 18:30:05 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZgzLoXgGQy8n5+EoPETu4M3mhPB/WdioE4tHe1tciJvfcbvfXagvzHY8eRVPz7SmMZA3/ZWxrcEV1MeDMx1sfA==", "user"=>{"email"=>"ekeast328@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (11.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "ekeast328@gmail.com"]]
+Completed 401 Unauthorized in 28ms (ActiveRecord: 11.6ms)
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZgzLoXgGQy8n5+EoPETu4M3mhPB/WdioE4tHe1tciJvfcbvfXagvzHY8eRVPz7SmMZA3/ZWxrcEV1MeDMx1sfA==", "user"=>{"email"=>"ekeast328@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendered devise/shared/_links.html.erb (12.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (78.2ms)
+Completed 200 OK in 358ms (Views: 178.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-03-04 18:30:09 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HW2UmUFXWsxh+Z7rWJ1RuyppcoP5Rml2C/2auirpoDakEOTnZPk2LzAiBtYrFgv91h/BjhOuHB8NohpCQqhE0Q==", "user"=>{"email"=>"ekeast328@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "ekeast328@gmail.com"]]
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.1ms)
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HW2UmUFXWsxh+Z7rWJ1RuyppcoP5Rml2C/2auirpoDakEOTnZPk2LzAiBtYrFgv91h/BjhOuHB8NohpCQqhE0Q==", "user"=>{"email"=>"ekeast328@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendered devise/shared/_links.html.erb (11.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (21.6ms)
+Completed 200 OK in 179ms (Views: 85.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2016-03-04 18:30:12 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (12.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (27.7ms)
+Completed 200 OK in 117ms (Views: 115.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2016-03-04 18:30:21 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8/FqHcMHb+kqqJNuB81ldrQPC+j5K6IBvaPtAi8QOmBKjBpj5qkDCntzC1N0Rj8wSHm45RPD12i7/G36R1Hehw==", "user"=>{"username"=>"ted", "email"=>"ekeast328@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'ekeast328@gmail.com' LIMIT 1[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."confirmation_token" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["confirmation_token", "a8fc76f33c90b10d5430f97ada626d58bae50625ae0aa89dc75b1e1077314b63"]]
+  [1m[36mSQL (25.6ms)[0m  [1mINSERT INTO "users" ("username", "email", "encrypted_password", "created_at", "updated_at", "confirmation_token", "confirmation_sent_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["username", "ted"], ["email", "ekeast328@gmail.com"], ["encrypted_password", "$2a$10$235Bmrolx7P8anJiZ.MQi.yyO4sfipGaGgqn9SJjw6hNNHI1gPnYK"], ["created_at", "2016-03-04 23:30:21.535945"], ["updated_at", "2016-03-04 23:30:21.535945"], ["confirmation_token", "oxXmFBfswKbCxAd1JzHB"], ["confirmation_sent_at", "2016-03-04 23:30:21.932925"]]
+  Rendered devise/mailer/confirmation_instructions.html.erb (10.0ms)
+
+Devise::Mailer#confirmation_instructions: processed outbound mail in 792.5ms
+
+Sent mail to ekeast328@gmail.com (743.0ms)
+Date: Fri, 04 Mar 2016 18:30:22 -0500
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: ekeast328@gmail.com
+Message-ID: <56da1a8ed092a_18ed3ff1cce95680367c1@adminsMacBook2.home.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome ekeast328@gmail.com to Bloccitoff, the to-do list that will change your life!</p>
+
+<p>Please confirm that this is your e-mail address and that your username is ted:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=oxXmFBfswKbCxAd1JzHB">Confirm my account</a></p>
+
+  [1m[35m (5.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 2402ms (ActiveRecord: 31.9ms)
+
+
+Started GET "/" for ::1 at 2016-03-04 18:30:23 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 168ms (Views: 164.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/confirmation?confirmation_token=oxXmFBfswKbCxAd1JzHB" for ::1 at 2016-03-04 18:30:47 -0500
+Processing by Devise::ConfirmationsController#show as HTML
+  Parameters: {"confirmation_token"=>"oxXmFBfswKbCxAd1JzHB"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."confirmation_token" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["confirmation_token", "oxXmFBfswKbCxAd1JzHB"]]
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mUPDATE "users" SET "confirmed_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["confirmed_at", "2016-03-04 23:30:47.657035"], ["updated_at", "2016-03-04 23:30:47.659735"], ["id", 3]]
+  [1m[35m (14.3ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 118ms (ActiveRecord: 16.2ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-03-04 18:30:47 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (21.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (63.3ms)
+Completed 200 OK in 439ms (Views: 425.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-03-04 18:30:56 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5OEjOi4/ywhKWyKqCeAxbXcdxiyhOCkVNTmbBYaDqt1dnFNEC5Gn6xuAupd6a2sri2t1IUvQXHwzZhv97sJOOg==", "user"=>{"email"=>"ekeast328@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "ekeast328@gmail.com"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2016-03-04 23:30:56.778404"], ["current_sign_in_at", "2016-03-04 23:30:56.778404"], ["last_sign_in_ip", "::1"], ["current_sign_in_ip", "::1"], ["sign_in_count", 1], ["updated_at", "2016-03-04 23:30:56.781092"], ["id", 3]]
+  [1m[35m (6.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 186ms (ActiveRecord: 7.0ms)
+
+
+Started GET "/" for ::1 at 2016-03-04 18:30:56 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 375ms (Views: 374.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-03-04 18:36:31 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.1ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+Completed 200 OK in 1084ms (Views: 1041.5ms | ActiveRecord: 1.2ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-03-04 18:36:39 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"AT0EmigCp5Q2qbSez61BG9iGVSCCUC3V+X7IF6HySqBl72a8K+OprfccYXiCwPkOSXiWg7rN7m43CY63XnTeDw=="}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 108ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-03-04 18:36:39 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 150ms (Views: 149.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-03-04 18:36:41 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (39.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (111.4ms)
+Completed 200 OK in 193ms (Views: 190.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/user" for ::1 at 2016-03-04 18:36:49 -0500
+
+ActionController::RoutingError (No route matches [POST] "/users/user"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.7ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (17.4ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (161.7ms)
+
+
+Started POST "/users/user" for ::1 at 2016-03-04 18:37:33 -0500
+
+ActionController::RoutingError (No route matches [POST] "/users/user"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.8ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.1ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.2ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.7ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (172.7ms)
+
+
+Started POST "/users/user" for ::1 at 2016-03-04 18:39:22 -0500
+
+ActionController::RoutingError (No route matches [POST] "/users/user"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.1ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (11.0ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (6.2ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (10.2ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (210.7ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-03-04 18:43:20 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (86.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (126.1ms)
+Completed 200 OK in 343ms (Views: 315.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/user" for ::1 at 2016-03-04 18:43:23 -0500
+
+ActionController::RoutingError (No route matches [POST] "/users/user"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.9ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.7ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.4ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (161.4ms)
+
+
+Started POST "/users/user" for ::1 at 2016-03-04 18:54:06 -0500
+
+ActionController::RoutingError (No route matches [POST] "/users/user"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.1ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.7ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (6.0ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (22.2ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (201.7ms)
+
+
+Started GET "/" for ::1 at 2016-03-04 18:55:00 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 437ms (Views: 426.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-03-04 18:55:06 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (157.7ms)
+Completed 500 Internal Server Error in 203ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `user_show_path' for #<#<Class:0x007f88a5565998>:0x007f88a5347738>):
+    1: <h2>Log in</h2>
+    2: 
+    3: <%= form_for(resource, as: resource_name, url: user_show_path(resource_name)) do |f| %>
+    4: 
+    5:   <div class="field">
+    6:     <%= f.label :email %><br />
+  app/views/devise/sessions/new.html.erb:3:in `_app_views_devise_sessions_new_html_erb___2646951441039847065_70112435996560'
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.7ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.6ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (113.5ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-03-04 18:55:07 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (28.2ms)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `user_show_path' for #<#<Class:0x007f88a5565998>:0x007f88a5b10910>):
+    1: <h2>Log in</h2>
+    2: 
+    3: <%= form_for(resource, as: resource_name, url: user_show_path(resource_name)) do |f| %>
+    4: 
+    5:   <div class="field">
+    6:     <%= f.label :email %><br />
+  app/views/devise/sessions/new.html.erb:3:in `_app_views_devise_sessions_new_html_erb___2646951441039847065_70112435996560'
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.7ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.4ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (105.9ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-03-04 18:55:35 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (12.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (78.3ms)
+Completed 200 OK in 270ms (Views: 258.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-03-04 18:56:43 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 417ms (Views: 407.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-03-04 18:56:45 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (80.5ms)
+Completed 500 Internal Server Error in 107ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"users"} missing required keys: [:id]):
+    24:   </div>
+    25: <% end %>
+    26: 
+    27: <%= render user_path %>
+  app/views/devise/sessions/new.html.erb:27:in `_app_views_devise_sessions_new_html_erb___2646951441039847065_70112434234740'
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.5ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.3ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (103.9ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-03-04 18:56:46 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (15.4ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"users"} missing required keys: [:id]):
+    24:   </div>
+    25: <% end %>
+    26: 
+    27: <%= render user_path %>
+  app/views/devise/sessions/new.html.erb:27:in `_app_views_devise_sessions_new_html_erb___2646951441039847065_70112434234740'
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (15.2ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.6ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (110.5ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-03-04 18:58:02 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (108.5ms)
+Completed 500 Internal Server Error in 188ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"users"} missing required keys: [:id]):
+    24:   </div>
+    25: <% end %>
+    26: 
+    27: <%= render user_path %>
+  app/views/devise/sessions/new.html.erb:27:in `_app_views_devise_sessions_new_html_erb___2646951441039847065_70112434234740'
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (16.0ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.5ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (241.2ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-03-04 18:58:06 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (9.9ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"users"} missing required keys: [:id]):
+    24:   </div>
+    25: <% end %>
+    26: 
+    27: <%= render user_path %>
+  app/views/devise/sessions/new.html.erb:27:in `_app_views_devise_sessions_new_html_erb___2646951441039847065_70112434234740'
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.6ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.7ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (105.6ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-03-04 18:58:21 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (21.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (146.0ms)
+Completed 200 OK in 753ms (Views: 726.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-03-04 18:58:27 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+l+pUJZTSXFHrRBBy+lV4D82+ZbEeEI5umLcCrgHmC2A3+i9J44B98zRQaEsfZvuiFjvSYgww+4gk8eJvlEbuw==", "user"=>{"email"=>"ekeast328@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (80.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "ekeast328@gmail.com"]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "users" SET "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["current_sign_in_at", "2016-03-04 23:58:28.957896"], ["sign_in_count", 2], ["updated_at", "2016-03-04 23:58:28.974710"], ["id", 3]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 1046ms (ActiveRecord: 82.2ms)
+
+
+Started GET "/" for ::1 at 2016-03-04 18:58:29 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+Completed 200 OK in 259ms (Views: 220.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/show" for ::1 at 2016-03-04 18:59:39 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 1222ms (ActiveRecord: 1.0ms)
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=show):
+  app/controllers/users_controller.rb:3:in `show'
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.5ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.8ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (100.6ms)
+
+
+Started GET "/" for ::1 at 2016-03-04 19:00:04 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+Completed 200 OK in 204ms (Views: 202.2ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-03-04 19:00:07 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"anetK2B5eHHL7DdZysi+e6/1uEY3ORQ1WNrg8x7t/bpM9THccx2BjlAinN3JvfHj+83mxrpsLAS4ftJzhPEHww=="}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 25ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2016-03-04 19:00:07 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 134ms (Views: 133.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-03-04 19:00:09 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (13.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (81.6ms)
+Completed 200 OK in 156ms (Views: 152.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-03-04 19:00:14 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jGJmXFuTy8OH1EaS4Xb7IKArOtzFFnieG0T0Yhj3DAua59RZqIwW6IB7Wd62JECIiWex6d//2Z0ih8bC90gF7A==", "user"=>{"email"=>"ekeast328@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "ekeast328@gmail.com"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2016-03-04 23:58:28.957896"], ["current_sign_in_at", "2016-03-05 00:00:14.511687"], ["sign_in_count", 3], ["updated_at", "2016-03-05 00:00:14.513200"], ["id", 3]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 136ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/" for ::1 at 2016-03-04 19:00:14 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+Completed 200 OK in 135ms (Views: 131.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-03-04 19:53:12 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 346ms (Views: 258.0ms | ActiveRecord: 30.5ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-03-04 19:53:18 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"XRpEgwC3UA7M8P/5zHcM/r5nFgCkaC8dRIP25L3HlZ8lsxTPO3OOq5q2qt5ju0tt8HNOThh4X8s7uPObYqvFAg=="}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 11ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-03-04 19:53:18 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 170ms (Views: 168.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-03-04 19:53:22 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (31.3ms)
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"users"} missing required keys: [:id]):
+    20:   <% end -%>
+    21: 
+    22:   <div class="actions">
+    23:     <%= f.submit "Log in", user_path %>
+    24:   </div>
+    25: <% end %>
+    26: 
+  app/views/devise/sessions/new.html.erb:23:in `block in _app_views_devise_sessions_new_html_erb___2646951441039847065_70112437370100'
+  app/views/devise/sessions/new.html.erb:3:in `_app_views_devise_sessions_new_html_erb___2646951441039847065_70112437370100'
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.5ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.6ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (137.2ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-03-04 19:53:24 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (7.8ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"users"} missing required keys: [:id]):
+    20:   <% end -%>
+    21: 
+    22:   <div class="actions">
+    23:     <%= f.submit "Log in", user_path %>
+    24:   </div>
+    25: <% end %>
+    26: 
+  app/views/devise/sessions/new.html.erb:23:in `block in _app_views_devise_sessions_new_html_erb___2646951441039847065_70112437370100'
+  app/views/devise/sessions/new.html.erb:3:in `_app_views_devise_sessions_new_html_erb___2646951441039847065_70112437370100'
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.0ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.2ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (108.6ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_username' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_username' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+
+
+Started GET "/" for ::1 at 2016-03-04 19:54:45 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 950ms (Views: 910.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/users.self-e0a657d9157153189196b9e4d8d5d19b9c1f4ceb3f9f94bde19e5c1edd6e3474.css?body=1" for ::1 at 2016-03-04 19:54:46 -0500
+
+
+Started GET "/assets/application.self-15281eff44676a092d0faabf91373e855f01b3c13928eabadefde6aad605c91a.css?body=1" for ::1 at 2016-03-04 19:54:46 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-04 19:54:46 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-04 19:54:46 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-04 19:54:46 -0500
+
+
+Started GET "/assets/bootstrap.self-d0e973a52d36a01036265aeefaf2d1ae3499d2cb231a9be3bd846432daf231de.js?body=1" for ::1 at 2016-03-04 19:54:46 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-04 19:54:46 -0500
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-03-04 19:54:46 -0500
+
+
+Started GET "/users/sign_in" for ::1 at 2016-03-04 19:54:59 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (189.5ms)
+Completed 500 Internal Server Error in 250ms (ActiveRecord: 0.6ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"users"} missing required keys: [:id]):
+    20:   <% end -%>
+    21: 
+    22:   <div class="actions">
+    23:     <%= f.submit "Log in", user_path %>
+    24:   </div>
+    25: <% end %>
+    26: 
+  app/views/devise/sessions/new.html.erb:23:in `block in _app_views_devise_sessions_new_html_erb__1967630918952832317_70238179482020'
+  app/views/devise/sessions/new.html.erb:3:in `_app_views_devise_sessions_new_html_erb__1967630918952832317_70238179482020'
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.1ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.4ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (107.2ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-03-04 19:55:00 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (8.7ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"users"} missing required keys: [:id]):
+    20:   <% end -%>
+    21: 
+    22:   <div class="actions">
+    23:     <%= f.submit "Log in", user_path %>
+    24:   </div>
+    25: <% end %>
+    26: 
+  app/views/devise/sessions/new.html.erb:23:in `block in _app_views_devise_sessions_new_html_erb__1967630918952832317_70238179482020'
+  app/views/devise/sessions/new.html.erb:3:in `_app_views_devise_sessions_new_html_erb__1967630918952832317_70238179482020'
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.9ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.5ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (116.5ms)
+
+
+Started GET "/" for ::1 at 2016-03-04 19:59:10 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 248ms (Views: 232.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-03-04 19:59:13 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (16.8ms)
+Completed 500 Internal Server Error in 81ms (ActiveRecord: 1.2ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"users"} missing required keys: [:id]):
+    21: 
+    22:   <div class="actions">
+    23:     <%= f.submit "Log in" %>
+    24:     <% redirect_to user_path %>
+    25:   </div>
+    26: <% end %>
+    27: 
+  app/views/devise/sessions/new.html.erb:24:in `block in _app_views_devise_sessions_new_html_erb__1967630918952832317_70238174221620'
+  app/views/devise/sessions/new.html.erb:3:in `_app_views_devise_sessions_new_html_erb__1967630918952832317_70238174221620'
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.3ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.5ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (115.3ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-03-04 19:59:14 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (9.2ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"users"} missing required keys: [:id]):
+    21: 
+    22:   <div class="actions">
+    23:     <%= f.submit "Log in" %>
+    24:     <% redirect_to user_path %>
+    25:   </div>
+    26: <% end %>
+    27: 
+  app/views/devise/sessions/new.html.erb:24:in `block in _app_views_devise_sessions_new_html_erb__1967630918952832317_70238174221620'
+  app/views/devise/sessions/new.html.erb:3:in `_app_views_devise_sessions_new_html_erb__1967630918952832317_70238174221620'
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (16.0ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.3ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (117.3ms)
+
+
+Started GET "/" for ::1 at 2016-03-04 19:59:57 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 119ms (Views: 117.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-03-04 19:59:59 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (68.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (144.7ms)
+Completed 200 OK in 249ms (Views: 241.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/user" for ::1 at 2016-03-04 20:00:05 -0500
+
+ActionController::RoutingError (No route matches [POST] "/users/user"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.1ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (13.4ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.2ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (161.6ms)
+
+
+Started GET "/" for ::1 at 2016-03-04 20:06:22 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 298ms (Views: 287.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-03-04 20:06:25 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (13.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (111.5ms)
+Completed 200 OK in 210ms (Views: 182.7ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-03-04 20:06:29 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mVugR0LkYli7J1SFIKPunmzX6etO000pSp/IkfSH5s0A9NfskrfWluRhv8qaoT9BiOPUsk91Xh91yDnSJGiigA==", "user"=>{"email"=>"ekeast328@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (45.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "ekeast328@gmail.com"]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2016-03-05 00:00:14.511687"], ["current_sign_in_at", "2016-03-05 01:06:30.639201"], ["sign_in_count", 4], ["updated_at", "2016-03-05 01:06:30.641915"], ["id", 3]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Completed 500 Internal Server Error in 628ms (ActiveRecord: 47.5ms)
+
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"users"} missing required keys: [:id]):
+  app/controllers/application_controller.rb:15:in `after_sign_in_path_for'
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.3ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (115.6ms)
+
+
+Started GET "/" for ::1 at 2016-03-04 20:07:30 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 211ms (Views: 199.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-03-04 20:07:34 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (12.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (89.1ms)
+Completed 200 OK in 177ms (Views: 154.8ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-03-04 20:07:39 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"L6rCr0zB0p4fc1ex/dJuHzmc7m242tzCNQ92Ebxbcuy2BbUEnJJmUEA1vP5H0L/A3ajTNLl8z/QKWIdSbLQ2oQ==", "user"=>{"email"=>"ekeast328@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "ekeast328@gmail.com"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2016-03-05 01:06:30.639201"], ["current_sign_in_at", "2016-03-05 01:07:40.042333"], ["sign_in_count", 5], ["updated_at", "2016-03-05 01:07:40.044052"], ["id", 3]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/3
+Completed 500 Internal Server Error in 105ms (ActiveRecord: 2.2ms)
+
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  actionpack (4.2.5) lib/action_controller/metal/rendering.rb:15:in `render'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.5) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/benchmark.rb:303:in `realtime'
+  activesupport (4.2.5) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.5) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  responders (2.1.1) lib/action_controller/responder.rb:236:in `default_render'
+  responders (2.1.1) lib/action_controller/responder.rb:170:in `to_html'
+  responders (2.1.1) lib/action_controller/responder.rb:163:in `respond'
+  responders (2.1.1) lib/action_controller/responder.rb:156:in `call'
+  responders (2.1.1) lib/action_controller/respond_with.rb:205:in `respond_with'
+  devise (3.5.6) app/controllers/devise/sessions_controller.rb:21:in `create'
+  actionpack (4.2.5) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.2.5) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.5) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.5) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.5) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.5) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.5) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.5) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.5) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.5) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:76:in `call'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/routing/mapper.rb:49:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  warden (1.2.6) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.6) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.6) lib/warden/manager.rb:34:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.5) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.8ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.8ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (104.4ms)
+
+
+Started GET "/" for ::1 at 2016-03-04 20:08:50 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 309ms (Views: 297.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-03-04 20:08:53 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (80.4ms)
+Completed 200 OK in 221ms (Views: 212.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-03-04 20:08:59 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nzCAz+DvoJVSskgymIIvpZsOBFWZO6GUplUQ3Qn7zd0Gn/dkMLwUWw30o30igP56fzo5DJidsqKZAuGe2RSJkA==", "user"=>{"email"=>"ekeast328@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "ekeast328@gmail.com"]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2016-03-05 01:07:40.042333"], ["current_sign_in_at", "2016-03-05 01:09:00.094233"], ["sign_in_count", 6], ["updated_at", "2016-03-05 01:09:00.096846"], ["id", 3]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/3
+Completed 500 Internal Server Error in 130ms (ActiveRecord: 2.4ms)
+
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  actionpack (4.2.5) lib/action_controller/metal/rendering.rb:15:in `render'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.5) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/benchmark.rb:303:in `realtime'
+  activesupport (4.2.5) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.5) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  responders (2.1.1) lib/action_controller/responder.rb:236:in `default_render'
+  responders (2.1.1) lib/action_controller/responder.rb:170:in `to_html'
+  responders (2.1.1) lib/action_controller/responder.rb:163:in `respond'
+  responders (2.1.1) lib/action_controller/responder.rb:156:in `call'
+  responders (2.1.1) lib/action_controller/respond_with.rb:205:in `respond_with'
+  devise (3.5.6) app/controllers/devise/sessions_controller.rb:21:in `create'
+  actionpack (4.2.5) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.2.5) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.5) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.5) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.5) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.5) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.5) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.5) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.5) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.5) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:76:in `call'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/routing/mapper.rb:49:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  warden (1.2.6) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.6) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.6) lib/warden/manager.rb:34:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.5) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.7ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.6ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (127.2ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-03-04 20:10:44 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7QdrmFUXWl+6YtG06GZW8s0UOi4kthAMp/oC25HS2RQr0vatWmCk/ACzX0b1cPcXW/PVOERgPk4UCGbJBzn2KQ==", "user"=>{"email"=>"ekeast328@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+Can't verify CSRF token authenticity
+Completed 422 Unprocessable Entity in 23ms (ActiveRecord: 0.0ms)
+
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  actionpack (4.2.5) lib/action_controller/metal/request_forgery_protection.rb:181:in `handle_unverified_request'
+  actionpack (4.2.5) lib/action_controller/metal/request_forgery_protection.rb:209:in `handle_unverified_request'
+  devise (3.5.6) lib/devise/controllers/helpers.rb:257:in `handle_unverified_request'
+  actionpack (4.2.5) lib/action_controller/metal/request_forgery_protection.rb:204:in `verify_authenticity_token'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:432:in `block in make_lambda'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:164:in `call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:164:in `block in halting'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:504:in `call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:504:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:504:in `each'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:504:in `call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.5) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.5) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.5) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.5) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.5) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.5) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.5) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:76:in `call'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/routing/mapper.rb:49:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  warden (1.2.6) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.6) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.6) lib/warden/manager.rb:34:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.5) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (23.9ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (17.7ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (149.2ms)
+
+
+Started GET "/" for ::1 at 2016-03-04 20:11:33 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 1147ms (Views: 1110.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-03-04 20:11:37 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (22.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (204.4ms)
+Completed 200 OK in 371ms (Views: 319.9ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-03-04 20:11:41 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PJTYr7a6JKswjC5xemtIFxtoHWwA59GrdI+LBkWV7pGlO68EZumQZW/KxT7AaZnI/1wgNQFBwp1L2HpFlXqq3A==", "user"=>{"email"=>"ekeast328@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (10.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "ekeast328@gmail.com"]]
+Completed 401 Unauthorized in 223ms (ActiveRecord: 10.5ms)
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PJTYr7a6JKswjC5xemtIFxtoHWwA59GrdI+LBkWV7pGlO68EZumQZW/KxT7AaZnI/1wgNQFBwp1L2HpFlXqq3A==", "user"=>{"email"=>"ekeast328@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendered devise/shared/_links.html.erb (15.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (27.1ms)
+Completed 200 OK in 198ms (Views: 100.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-03-04 20:11:46 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Kitx0eFDfkG+TXIqdRsBfdAZVfaSlggefT7iedTnNSizhAZ6MRDKj+ELmWXPGdCiNC1or5MwGyhCaRM6BAhxZQ==", "user"=>{"email"=>"ekeast328@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "ekeast328@gmail.com"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2016-03-05 01:09:00.094233"], ["current_sign_in_at", "2016-03-05 01:11:46.436331"], ["sign_in_count", 7], ["updated_at", "2016-03-05 01:11:46.437873"], ["id", 3]]
+  [1m[35m (9.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/3
+Completed 500 Internal Server Error in 174ms (ActiveRecord: 10.4ms)
+
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  actionpack (4.2.5) lib/action_controller/metal/rendering.rb:15:in `render'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.5) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/benchmark.rb:303:in `realtime'
+  activesupport (4.2.5) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.5) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  responders (2.1.1) lib/action_controller/responder.rb:236:in `default_render'
+  responders (2.1.1) lib/action_controller/responder.rb:170:in `to_html'
+  responders (2.1.1) lib/action_controller/responder.rb:163:in `respond'
+  responders (2.1.1) lib/action_controller/responder.rb:156:in `call'
+  responders (2.1.1) lib/action_controller/respond_with.rb:205:in `respond_with'
+  devise (3.5.6) app/controllers/devise/sessions_controller.rb:21:in `create'
+  actionpack (4.2.5) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.2.5) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.5) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.5) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.5) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.5) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.5) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.5) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.5) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.5) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:76:in `call'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/routing/mapper.rb:49:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  warden (1.2.6) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.6) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.6) lib/warden/manager.rb:34:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.5) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.2ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.1ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (115.5ms)
+
+
+Started GET "/" for ::1 at 2016-03-04 20:12:04 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 225ms (Views: 210.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-03-04 20:12:07 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (13.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (29.3ms)
+Completed 200 OK in 197ms (Views: 163.8ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-03-04 20:12:11 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fJxnrbk9ocM/TJWNFuctK68MJ/MOuJb6biHhrvW7rw3lMxAGaW4VDWAKfsKs5fz0Szgaqg8ehcxRdhDtJVTrQA==", "user"=>{"email"=>"ekeast328@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "ekeast328@gmail.com"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2016-03-05 01:11:46.436331"], ["current_sign_in_at", "2016-03-05 01:12:11.551830"], ["sign_in_count", 8], ["updated_at", "2016-03-05 01:12:11.553857"], ["id", 3]]
+  [1m[35m (1.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 124ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/" for ::1 at 2016-03-04 20:12:11 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 107ms (Views: 105.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-03-04 20:13:59 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+  [1m[35mUser Load (13.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+Completed 200 OK in 300ms (Views: 250.3ms | ActiveRecord: 14.3ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-03-04 20:14:03 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"YdiX/q7qSoRjA6p952otxJ/x2qa4r8V7J0/CtHtZOaL3YU9BlHOLD3R/oPSLK1BKcOI6Imgn9Vn+e+DgG8gzsw=="}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 53ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2016-03-04 20:14:04 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 83ms (Views: 82.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-03-04 20:14:06 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (22.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (48.6ms)
+Completed 200 OK in 243ms (Views: 236.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-03-04 20:14:10 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eY/5tBA5U1+BysdFvO8m76McYOE/2LLyTFOwf+1M554BTJv1i+RY1tzFY70TrgHXdcSngMmtJ9tXXK5NT2B1Eg==", "user"=>{"email"=>"ekeast328@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (19.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "ekeast328@gmail.com"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2016-03-05 01:12:11.551830"], ["current_sign_in_at", "2016-03-05 01:14:10.570028"], ["sign_in_count", 9], ["updated_at", "2016-03-05 01:14:10.572032"], ["id", 3]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 135ms (ActiveRecord: 20.7ms)
+
+
+Started GET "/" for ::1 at 2016-03-04 20:14:10 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+Completed 200 OK in 59ms (Views: 57.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/edit" for ::1 at 2016-03-04 20:14:23 -0500
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  Rendered devise/registrations/edit.html.erb within layouts/application (31.1ms)
+Completed 200 OK in 726ms (Views: 701.3ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-03-04 20:14:25 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"XEqBlt3cZItcnsywvHVcYGo7yhw9jqdDlgOtKvH6edSmudkEhnOGBcgi/Ein8rM41XiLIJrKJ3mNzp6oNHBeJA=="}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-03-04 20:14:25 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 79ms (Views: 78.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-03-04 20:15:01 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 232ms (Views: 210.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-03-04 20:15:05 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (13.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (43.9ms)
+Completed 200 OK in 160ms (Views: 129.2ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-03-04 20:15:09 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YytX/DCOlMmyEbzKjA3t2fmpXt6ukAt5MbKz9P0DzJoaPI7v6Vk3I/+31BqN2OOTfGH1/nGe0Qw7AAMmMXRS1A==", "user"=>{"email"=>"ekeast328@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "ekeast328@gmail.com"]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2016-03-05 01:14:10.570028"], ["current_sign_in_at", "2016-03-05 01:15:09.251693"], ["sign_in_count", 10], ["updated_at", "2016-03-05 01:15:09.254039"], ["id", 3]]
+  [1m[35m (1.3ms)[0m  commit transaction
+Completed 500 Internal Server Error in 110ms (ActiveRecord: 2.4ms)
+
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"users"} missing required keys: [:id]):
+  app/controllers/application_controller.rb:15:in `after_sign_in_path_for'
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.8ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.8ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (115.7ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-03-04 20:15:55 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (13.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (30.5ms)
+Completed 200 OK in 217ms (Views: 188.7ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-03-04 20:15:59 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"b26mYAtrAFRgQnNic4h8FlgLOeyV4bggk+T8HYAkVfMWeX9z0ryjvi3kG7JyXXJc3cOSzErvYlWZVkzPTFPLvQ==", "user"=>{"email"=>"ekeast328@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "ekeast328@gmail.com"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2016-03-05 01:15:09.251693"], ["current_sign_in_at", "2016-03-05 01:15:59.685192"], ["sign_in_count", 11], ["updated_at", "2016-03-05 01:15:59.686545"], ["id", 3]]
+  [1m[35m (1.3ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 114ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/users/3" for ::1 at 2016-03-04 20:15:59 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered users/show.html.erb within layouts/application (17.2ms)
+Completed 500 Internal Server Error in 83ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `avatar_url' for #<User:0x007f7fc6ad8930>):
+    2:   <div class="col-md-8">
+    3:     <div class="media">
+    4:       <br />
+    5:       <% avatar_url = @user.avatar_url(128) %>
+    6:       <% if avatar_url %>
+    7:         <div class="media-left">
+    8:           <%= image_tag avatar_url, class: 'media-object' %>
+  app/views/users/show.html.erb:5:in `_app_views_users_show_html_erb__220163820130809940_70093385355080'
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.4ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.4ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (104.1ms)
+
+
+Started GET "/" for ::1 at 2016-03-04 20:17:11 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+Completed 200 OK in 197ms (Views: 195.6ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-03-04 20:17:14 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"OOqNeOTXBCv6ffmvnsoKRuPL8L+MA8+Pc6QmTijmbvCJRdyK8Ay15StiCM3ROq9MhuSpCUvMdLfcOn9W5Nx8Iw=="}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-03-04 20:17:14 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 68ms (Views: 67.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-03-04 20:17:15 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (13.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (42.3ms)
+Completed 200 OK in 120ms (Views: 117.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-03-04 20:17:20 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1+dAJUOfdVhXuw7Ajyosd0nbVBaTU8Gd1eGSiUZ+ePVORpx6g0Rz7Xs/RKEj8Jz32OXO9la19p5fyFK3kbW4ng==", "user"=>{"email"=>"ekeast328@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "ekeast328@gmail.com"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2016-03-05 01:15:59.685192"], ["current_sign_in_at", "2016-03-05 01:17:20.403276"], ["sign_in_count", 12], ["updated_at", "2016-03-05 01:17:20.404832"], ["id", 3]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 113ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/users/3" for ::1 at 2016-03-04 20:17:20 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered users/show.html.erb within layouts/application (41.7ms)
+Completed 500 Internal Server Error in 67ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined local variable or method `avatar_url' for #<#<Class:0x007f7fc6ad37c8>:0x007f7fc1d48f08>):
+    2:   <div class="col-md-8">
+    3:     <div class="media">
+    4:       <br />
+    5:       <% if avatar_url %>
+    6:         <div class="media-left">
+    7:           <h2>YOU MADE IT TO THE SHOW VIEW BITCH</h2>
+    8:         </div>
+  app/views/users/show.html.erb:5:in `_app_views_users_show_html_erb__220163820130809940_70093344707900'
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.7ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.4ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (116.8ms)
+
+
+Started GET "/" for ::1 at 2016-03-04 20:17:41 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 57ms (Views: 52.1ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-03-04 20:17:44 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"XgNjykBNjJHF9R5rB57UYzvsPj9tVmm6G8Ls1LvnEkmF2WcwlKuO/IWmtMKF14st0LqxenC9dDkC3lxbq2nKHQ=="}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2016-03-04 20:17:44 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 51ms (Views: 50.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-03-04 20:17:46 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (12.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (44.4ms)
+Completed 200 OK in 130ms (Views: 128.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-03-04 20:17:49 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"L+pHlcCeiuBSD5Bu4BPznxZaTAeHvuHsKcMu1EtXP6A2lMmdHT6qWA6Ftb6rkvsc+sSozOzBxYmtCBlVhdrlCQ==", "user"=>{"email"=>"ekeast328@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "ekeast328@gmail.com"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2016-03-05 01:17:20.403276"], ["current_sign_in_at", "2016-03-05 01:17:50.096300"], ["sign_in_count", 13], ["updated_at", "2016-03-05 01:17:50.097440"], ["id", 3]]
+  [1m[35m (1.3ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 110ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/users/3" for ::1 at 2016-03-04 20:17:50 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+Completed 200 OK in 61ms (Views: 59.7ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-03-04 20:25:06 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"R9svyy6tc4DmLjuiM3zRgddjpgM144rrNVlea/qszCBc39Rl+sEWgwPaYgsCJcu+HFouLYPNS8wMsCMt2pJYLA=="}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-03-04 20:25:06 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 180ms (Views: 179.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-03-04 20:25:08 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (11.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (51.9ms)
+Completed 200 OK in 121ms (Views: 118.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-03-04 20:25:12 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZT+veLKT1NG1WxGwGbZ1pfdJeNv+jLTRnRoOtQT4El4qml0tuyMGqvd03PS89MnW8L5ziFDgPzz6A7I45waATg==", "user"=>{"email"=>"ekeast328@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "ekeast328@gmail.com"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (18.8ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2016-03-05 01:17:50.096300"], ["current_sign_in_at", "2016-03-05 01:25:12.204553"], ["sign_in_count", 14], ["updated_at", "2016-03-05 01:25:12.206575"], ["id", 3]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 133ms (ActiveRecord: 20.1ms)
+
+
+Started GET "/users/3" for ::1 at 2016-03-04 20:25:12 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered users/show.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 65ms (Views: 63.7ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-03-04 20:29:28 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"rtDpUDMbmgmDJc/OAmyz7RP2EAEMqzqPeEYj0kmM74KhwxARJaMstg0jj/+DOWc7kP8NzvcbbKHqQEcXsWQziQ=="}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36m (0.9ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 59ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/" for ::1 at 2016-03-04 20:29:28 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 267ms (Views: 265.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-03-04 20:29:35 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (11.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (64.6ms)
+Completed 200 OK in 254ms (Views: 250.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-03-04 20:30:15 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8jJde25HlljZXJPAlzgPWyvsDwvnRAOb02fd3EOAXL9gItxZiTtsatQ3LO/IEhehXeokXhBDlX2EZuB4PUKpdw==", "user"=>{"email"=>"ekeast328@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "ekeast328@gmail.com"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (13.0ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2016-03-05 01:25:12.204553"], ["current_sign_in_at", "2016-03-05 01:30:15.970395"], ["sign_in_count", 15], ["updated_at", "2016-03-05 01:30:15.971882"], ["id", 3]]
+  [1m[35m (1.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 126ms (ActiveRecord: 14.3ms)
+
+
+Started GET "/users/3" for ::1 at 2016-03-04 20:30:16 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered users/show.html.erb within layouts/application (1.7ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+Completed 200 OK in 150ms (Views: 147.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/3" for ::1 at 2016-03-04 20:30:37 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered users/show.html.erb within layouts/application (8.6ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+Completed 200 OK in 290ms (Views: 258.9ms | ActiveRecord: 1.3ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-03-04 20:30:41 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"HzOXpoUrtciZV7BJ1oCaH4wALN4tLdt6oYWCxir/SH9xD3M1mipraLiG2yIhIf2Rnx6MrXkJH+Wd7ESaP4OxQg=="}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 27ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2016-03-04 20:30:41 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 80ms (Views: 79.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-03-04 20:30:43 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (15.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (83.8ms)
+Completed 200 OK in 188ms (Views: 179.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-03-04 20:30:49 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YwTV2pzp+AX7+cu+Gq5kS8t7FsF52MB0hNGscawf5HH18tePxbUXprSo16EgSNPRskU234d5LAbqw7TK/deycA==", "user"=>{"email"=>"ekeast328@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "ekeast328@gmail.com"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2016-03-05 01:30:15.970395"], ["current_sign_in_at", "2016-03-05 01:30:49.235458"], ["sign_in_count", 16], ["updated_at", "2016-03-05 01:30:49.237569"], ["id", 3]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 120ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/users/3" for ::1 at 2016-03-04 20:30:49 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered users/show.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 80ms (Views: 78.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/3" for ::1 at 2016-03-04 20:32:22 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered users/show.html.erb within layouts/application (10.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 626ms (Views: 602.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2016-03-04 20:33:38 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+Completed 200 OK in 1077ms (Views: 1076.3ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-03-04 20:33:44 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"v7/gl8i+YwSrzMq1JNauOgejn+q7MxQnVE7/KE5nFJ9r1i42K4vIzp7Bmr2tEkixTgEIBa64yWtMLtXgF/Er6Q=="}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 42ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2016-03-04 20:33:44 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 202ms (Views: 200.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-03-04 20:33:46 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (28.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (108.4ms)
+Completed 200 OK in 184ms (Views: 180.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-03-04 20:33:52 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9G7hjBp8ETmMP8NLMVhfRRbPIrFY080rwhts2gEZgYkRizb5P8N+HsJHm669PyItOYcO341UOZKHlAfmvJbbog==", "user"=>{"email"=>"ekeast328@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "ekeast328@gmail.com"]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.4ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2016-03-05 01:30:49.235458"], ["current_sign_in_at", "2016-03-05 01:33:52.512946"], ["sign_in_count", 17], ["updated_at", "2016-03-05 01:33:52.514798"], ["id", 3]]
+  [1m[36m (4.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 132ms (ActiveRecord: 7.6ms)
+
+
+Started GET "/users/3" for ::1 at 2016-03-04 20:33:52 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  Rendered users/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 144ms (Views: 141.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/3" for ::1 at 2016-03-04 20:34:17 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  Rendered users/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 180ms (Views: 178.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/3" for ::1 at 2016-03-04 20:34:41 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  Rendered users/show.html.erb within layouts/application (21.5ms)
+Completed 200 OK in 239ms (Views: 219.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users/3" for ::1 at 2016-03-04 20:35:00 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  Rendered users/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 109ms (Views: 107.2ms | ActiveRecord: 0.3ms)
