@@ -10833,3 +10833,1026 @@ ActionView::Template::Error (undefined method `order' for nil:NilClass):
   Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.8ms)
   Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
   Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (119.8ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (13.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (17.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'jermaine@emard.org' LIMIT 1[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."confirmation_token" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["confirmation_token", "5393422ddf85ae21a57e16cc6a1ca81d26317f2f1a1ec83978bea281726b050f"]]
+  [1m[36mSQL (15.6ms)[0m  [1mINSERT INTO "users" ("username", "email", "encrypted_password", "created_at", "updated_at", "confirmation_token", "confirmation_sent_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["username", "hank_wilkinson"], ["email", "jermaine@emard.org"], ["encrypted_password", "$2a$10$5Jo/7uYY7FaeHaNLaZ9QzO9NK/aOOxdWwEpvIa/IUoumoavMbVVhW"], ["created_at", "2016-03-05 20:34:28.565508"], ["updated_at", "2016-03-05 20:34:28.565508"], ["confirmation_token", "xB_PLTQUsz7yPsMJzNsz"], ["confirmation_sent_at", "2016-03-05 20:34:28.922919"]]
+  Rendered devise/mailer/confirmation_instructions.html.erb (44.8ms)
+
+Devise::Mailer#confirmation_instructions: processed outbound mail in 477.7ms
+
+Sent mail to jermaine@emard.org (525.6ms)
+Date: Sat, 05 Mar 2016 15:34:29 -0500
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: jermaine@emard.org
+Message-ID: <56db42d5909e7_1e853fe16885e2043879@admins-MacBook-2.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome jermaine@emard.org to Bloccitoff, the to-do list that will change your life!</p>
+
+<p>Please confirm that this is your e-mail address and that your username is hank_wilkinson:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=xB_PLTQUsz7yPsMJzNsz">Confirm my account</a></p>
+
+  [1m[35m (29.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'keon@murphy.biz' LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."confirmation_token" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["confirmation_token", "d2872338a30d62def361d6e8f60eaa7fff40f2d344c7cd874393ff6f5f02dffd"]]
+  [1m[35mSQL (29.1ms)[0m  INSERT INTO "users" ("username", "email", "encrypted_password", "created_at", "updated_at", "confirmation_token", "confirmation_sent_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["username", "luz_harvey"], ["email", "keon@murphy.biz"], ["encrypted_password", "$2a$10$G.OHe74ZaTPBxW46EFQ8Kev0nvXmRjY7ix9IijcLX3EZiG2NIbxMS"], ["created_at", "2016-03-05 20:34:30.233772"], ["updated_at", "2016-03-05 20:34:30.233772"], ["confirmation_token", "UvhTPNA-h12WjoNsy4BU"], ["confirmation_sent_at", "2016-03-05 20:34:30.236811"]]
+  Rendered devise/mailer/confirmation_instructions.html.erb (3.7ms)
+
+Devise::Mailer#confirmation_instructions: processed outbound mail in 34.7ms
+
+Sent mail to keon@murphy.biz (280.8ms)
+Date: Sat, 05 Mar 2016 15:34:30 -0500
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: keon@murphy.biz
+Message-ID: <56db42d64c211_1e853fe16885e2043965@admins-MacBook-2.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome keon@murphy.biz to Bloccitoff, the to-do list that will change your life!</p>
+
+<p>Please confirm that this is your e-mail address and that your username is luz_harvey:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=UvhTPNA-h12WjoNsy4BU">Confirm my account</a></p>
+
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'clinton@borer.name' LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."confirmation_token" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["confirmation_token", "9a0ad0c94b2ce2adab9a545e787e47125ca99e3bffcce72c8c7e498cdc1e7018"]]
+  [1m[36mSQL (1.8ms)[0m  [1mINSERT INTO "users" ("username", "email", "encrypted_password", "created_at", "updated_at", "confirmation_token", "confirmation_sent_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["username", "bernard.ferry"], ["email", "clinton@borer.name"], ["encrypted_password", "$2a$10$3c8a7yr.vMdFNnvtEgyPZuZu7QCtsx8W7W1H7wztqZth5cjXYEGai"], ["created_at", "2016-03-05 20:34:30.693670"], ["updated_at", "2016-03-05 20:34:30.693670"], ["confirmation_token", "anV22eJus7q8s-U2a5Sp"], ["confirmation_sent_at", "2016-03-05 20:34:30.695166"]]
+  Rendered devise/mailer/confirmation_instructions.html.erb (3.9ms)
+
+Devise::Mailer#confirmation_instructions: processed outbound mail in 35.6ms
+
+Sent mail to clinton@borer.name (210.5ms)
+Date: Sat, 05 Mar 2016 15:34:30 -0500
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: clinton@borer.name
+Message-ID: <56db42d6b3bca_1e853fe16885e2044072@admins-MacBook-2.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome clinton@borer.name to Bloccitoff, the to-do list that will change your life!</p>
+
+<p>Please confirm that this is your e-mail address and that your username is bernard.ferry:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=anV22eJus7q8s-U2a5Sp">Confirm my account</a></p>
+
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'reyes@thiel.org' LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."confirmation_token" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["confirmation_token", "8c3737367995d5075f3851c8caf6002112622d9450399bdc0acdfe6f08867418"]]
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("username", "email", "encrypted_password", "created_at", "updated_at", "confirmation_token", "confirmation_sent_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["username", "kylie.denesik"], ["email", "reyes@thiel.org"], ["encrypted_password", "$2a$10$Qh.Uoe1VCUIX.1sqPaVk9e0RFru3nROfRayLvY4jJgDaO1zsVYjQa"], ["created_at", "2016-03-05 20:34:31.044078"], ["updated_at", "2016-03-05 20:34:31.044078"], ["confirmation_token", "fJPVdeYsJJKAS1-CwGkf"], ["confirmation_sent_at", "2016-03-05 20:34:31.045184"]]
+  Rendered devise/mailer/confirmation_instructions.html.erb (3.8ms)
+
+Devise::Mailer#confirmation_instructions: processed outbound mail in 31.2ms
+
+Sent mail to reyes@thiel.org (228.5ms)
+Date: Sat, 05 Mar 2016 15:34:31 -0500
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: reyes@thiel.org
+Message-ID: <56db42d713885_1e853fe16885e20441e3@admins-MacBook-2.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome reyes@thiel.org to Bloccitoff, the to-do list that will change your life!</p>
+
+<p>Please confirm that this is your e-mail address and that your username is kylie.denesik:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=fJPVdeYsJJKAS1-CwGkf">Confirm my account</a></p>
+
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'wilhelmine.heller@fisher.org' LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."confirmation_token" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["confirmation_token", "3c4bb091c237e41b9247dd44863a79e40f0b32ca0f3aaf8f15425cc992426ec5"]]
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("username", "email", "encrypted_password", "created_at", "updated_at", "confirmation_token", "confirmation_sent_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["username", "jayme"], ["email", "wilhelmine.heller@fisher.org"], ["encrypted_password", "$2a$10$g5mqAXLIxoP6/bdOb7lDYeJyP/RYD5y0zEnsgxwB6PKIWwJbqoZE."], ["created_at", "2016-03-05 20:34:31.405965"], ["updated_at", "2016-03-05 20:34:31.405965"], ["confirmation_token", "Ys48_tvv8RmWWsmTpKa8"], ["confirmation_sent_at", "2016-03-05 20:34:31.407019"]]
+  Rendered devise/mailer/confirmation_instructions.html.erb (4.6ms)
+
+Devise::Mailer#confirmation_instructions: processed outbound mail in 32.4ms
+
+Sent mail to wilhelmine.heller@fisher.org (209.4ms)
+Date: Sat, 05 Mar 2016 15:34:31 -0500
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: wilhelmine.heller@fisher.org
+Message-ID: <56db42d76c36b_1e853fe16885e2044278@admins-MacBook-2.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome wilhelmine.heller@fisher.org to Bloccitoff, the to-do list that will change your life!</p>
+
+<p>Please confirm that this is your e-mail address and that your username is jayme:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=Ys48_tvv8RmWWsmTpKa8">Confirm my account</a></p>
+
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (3.2ms)[0m  [1mCREATE TABLE "items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (17.6ms)[0m  select sqlite_version(*)
+  [1m[36m (4.5ms)[0m  [1mCREATE  INDEX "index_items_on_user_id" ON "items" ("user_id")[0m
+  [1m[35m (1.9ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "username" varchar, "confirmation_token" varchar, "confirmed_at" datetime, "confirmation_sent_at" datetime, "unconfirmed_email" varchar) 
+  [1m[36m (4.0ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (5.0ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (2.9ms)[0m  CREATE UNIQUE INDEX "index_users_on_username" ON "users" ("username")
+  [1m[36m (3.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (19.6ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160305135939')
+  [1m[36m (2.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160302174441')[0m
+  [1m[35m (1.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160303124523')
+  [1m[36m (4.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160303144547')[0m
+  [1m[35m (1.3ms)[0m  CREATE TABLE "items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.4ms)[0m  CREATE  INDEX "index_items_on_user_id" ON "items" ("user_id")
+  [1m[36m (13.1ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "username" varchar, "confirmation_token" varchar, "confirmed_at" datetime, "confirmation_sent_at" datetime, "unconfirmed_email" varchar) [0m
+  [1m[35m (9.0ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (14.8ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (4.0ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (2.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (4.6ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_username" ON "users" ("username")[0m
+  [1m[35m (26.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (12.7ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (2.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160305135939')[0m
+  [1m[35m (1.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160302174441')
+  [1m[36m (4.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160303124523')[0m
+  [1m[35m (2.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160303144547')
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'gladyce_pfeffer@bechtelar.com' LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."confirmation_token" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["confirmation_token", "cb287de8a8fa7eb4f73194c445e36a094a7858c63bfd688c6addaab559fe8182"]]
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "users" ("username", "email", "encrypted_password", "created_at", "updated_at", "confirmation_token", "confirmation_sent_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["username", "shanna"], ["email", "gladyce_pfeffer@bechtelar.com"], ["encrypted_password", "$2a$10$BCLd9rSNU02h00IT50H4n.h4Dkyfu5QELa2jUVCQ8DvTkKzOSriL."], ["created_at", "2016-03-05 20:35:16.108255"], ["updated_at", "2016-03-05 20:35:16.108255"], ["confirmation_token", "xxjwUWsZX2qy1_ybnmDG"], ["confirmation_sent_at", "2016-03-05 20:35:16.489708"]]
+  Rendered devise/mailer/confirmation_instructions.html.erb (21.9ms)
+
+Devise::Mailer#confirmation_instructions: processed outbound mail in 504.2ms
+
+Sent mail to gladyce_pfeffer@bechtelar.com (699.3ms)
+Date: Sat, 05 Mar 2016 15:35:17 -0500
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: gladyce_pfeffer@bechtelar.com
+Message-ID: <56db4305a4fc_1e893fc53845420485523@admins-MacBook-2.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome gladyce_pfeffer@bechtelar.com to Bloccitoff, the to-do list that will change your life!</p>
+
+<p>Please confirm that this is your e-mail address and that your username is shanna:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=xxjwUWsZX2qy1_ybnmDG">Confirm my account</a></p>
+
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'citlalli@veum.io' LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."confirmation_token" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["confirmation_token", "d0112bcfb296adf7f5d3f9c6a624bf66e0c4edc92be6d2897c26cc0b39e17f19"]]
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("username", "email", "encrypted_password", "created_at", "updated_at", "confirmation_token", "confirmation_sent_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["username", "glennie"], ["email", "citlalli@veum.io"], ["encrypted_password", "$2a$10$5mmt58uUaY53l/FxTMXA2eM88jVp7xyUkYJpy5BOKCgrPmyCYru.C"], ["created_at", "2016-03-05 20:35:17.834000"], ["updated_at", "2016-03-05 20:35:17.834000"], ["confirmation_token", "xyPuHZ9xB-kzdyGAxDmj"], ["confirmation_sent_at", "2016-03-05 20:35:17.835092"]]
+  Rendered devise/mailer/confirmation_instructions.html.erb (7.1ms)
+
+Devise::Mailer#confirmation_instructions: processed outbound mail in 40.5ms
+
+Sent mail to citlalli@veum.io (449.4ms)
+Date: Sat, 05 Mar 2016 15:35:17 -0500
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: citlalli@veum.io
+Message-ID: <56db4305d6abc_1e893fc53845420485616@admins-MacBook-2.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome citlalli@veum.io to Bloccitoff, the to-do list that will change your life!</p>
+
+<p>Please confirm that this is your e-mail address and that your username is glennie:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=xyPuHZ9xB-kzdyGAxDmj">Confirm my account</a></p>
+
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'linnea_stracke@feeneykuvalis.info' LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."confirmation_token" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["confirmation_token", "acffd172b905ebac82e9770deeea39d5795da798dd1bf89594d7cb3b795387fc"]]
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("username", "email", "encrypted_password", "created_at", "updated_at", "confirmation_token", "confirmation_sent_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["username", "jeremie_ebert"], ["email", "linnea_stracke@feeneykuvalis.info"], ["encrypted_password", "$2a$10$W.HFmlyElVTrUQ/HLgE53e6ZoqaKx/pZgy701sJBraAvxpW3gqCaa"], ["created_at", "2016-03-05 20:35:18.426156"], ["updated_at", "2016-03-05 20:35:18.426156"], ["confirmation_token", "CL1rd_BkLzWmqxbkv1Aa"], ["confirmation_sent_at", "2016-03-05 20:35:18.427191"]]
+  Rendered devise/mailer/confirmation_instructions.html.erb (4.0ms)
+
+Devise::Mailer#confirmation_instructions: processed outbound mail in 32.7ms
+
+Sent mail to linnea_stracke@feeneykuvalis.info (415.3ms)
+Date: Sat, 05 Mar 2016 15:35:18 -0500
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: linnea_stracke@feeneykuvalis.info
+Message-ID: <56db430671225_1e893fc5384542048575f@admins-MacBook-2.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome linnea_stracke@feeneykuvalis.info to Bloccitoff, the to-do list that will change your life!</p>
+
+<p>Please confirm that this is your e-mail address and that your username is jeremie_ebert:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=CL1rd_BkLzWmqxbkv1Aa">Confirm my account</a></p>
+
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'roberto@spencer.biz' LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."confirmation_token" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["confirmation_token", "1dc07ecb51bda9edb78f579fce3ffc1c12a8e1fd59277fedda1bff6fe8728dcd"]]
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("username", "email", "encrypted_password", "created_at", "updated_at", "confirmation_token", "confirmation_sent_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["username", "aleandra_franecki"], ["email", "roberto@spencer.biz"], ["encrypted_password", "$2a$10$GXU7sRJ78fgWkoAMOE/JA.YFu.Zow5CIAZuBGx0CWqmOCeQ/dyTmK"], ["created_at", "2016-03-05 20:35:18.976451"], ["updated_at", "2016-03-05 20:35:18.976451"], ["confirmation_token", "1QiP6K2gxc3vdrDjBVyS"], ["confirmation_sent_at", "2016-03-05 20:35:18.977476"]]
+  Rendered devise/mailer/confirmation_instructions.html.erb (4.0ms)
+
+Devise::Mailer#confirmation_instructions: processed outbound mail in 31.4ms
+
+Sent mail to roberto@spencer.biz (213.5ms)
+Date: Sat, 05 Mar 2016 15:35:19 -0500
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: roberto@spencer.biz
+Message-ID: <56db4307317d_1e893fc5384542048584b@admins-MacBook-2.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome roberto@spencer.biz to Bloccitoff, the to-do list that will change your life!</p>
+
+<p>Please confirm that this is your e-mail address and that your username is aleandra_franecki:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=1QiP6K2gxc3vdrDjBVyS">Confirm my account</a></p>
+
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'leo@rosenbaumwindler.org' LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."confirmation_token" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["confirmation_token", "c31918aff00e41220670c3739501434f896004014bddda91b30b9d1e142b5d2a"]]
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("username", "email", "encrypted_password", "created_at", "updated_at", "confirmation_token", "confirmation_sent_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["username", "herta"], ["email", "leo@rosenbaumwindler.org"], ["encrypted_password", "$2a$10$DCNQ4MXXJWYEjwF9LW8F/u4LVeRdZfst8QEN7CxdaBdponIih98Ey"], ["created_at", "2016-03-05 20:35:19.326289"], ["updated_at", "2016-03-05 20:35:19.326289"], ["confirmation_token", "gEx3GKWXhh4CKeXyHeYo"], ["confirmation_sent_at", "2016-03-05 20:35:19.327386"]]
+  Rendered devise/mailer/confirmation_instructions.html.erb (4.3ms)
+
+Devise::Mailer#confirmation_instructions: processed outbound mail in 34.1ms
+
+Sent mail to leo@rosenbaumwindler.org (234.8ms)
+Date: Sat, 05 Mar 2016 15:35:19 -0500
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: leo@rosenbaumwindler.org
+Message-ID: <56db43075949a_1e893fc5384542048591c@admins-MacBook-2.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome leo@rosenbaumwindler.org to Bloccitoff, the to-do list that will change your life!</p>
+
+<p>Please confirm that this is your e-mail address and that your username is herta:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=gEx3GKWXhh4CKeXyHeYo">Confirm my account</a></p>
+
+  [1m[35m (3.6ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (6.9ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'johnnie@morar.name' LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."confirmation_token" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["confirmation_token", "dc35ab7944c38e88da124e4d28b2f754530d8318ab4a0a1da4e317604aba1dfc"]]
+  [1m[36mSQL (1.8ms)[0m  [1mINSERT INTO "users" ("username", "email", "encrypted_password", "created_at", "updated_at", "confirmation_token", "confirmation_sent_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["username", "maximillian"], ["email", "johnnie@morar.name"], ["encrypted_password", "$2a$10$.I2bg6sBgfQuoP98J7P4EOO.59sEGxN4EKPY099oEkQSXnqQ7z.Xe"], ["created_at", "2016-03-05 20:35:44.417062"], ["updated_at", "2016-03-05 20:35:44.417062"], ["confirmation_token", "Ut-g-bBL_isy3fTx2rSd"], ["confirmation_sent_at", "2016-03-05 20:35:44.778729"]]
+  Rendered devise/mailer/confirmation_instructions.html.erb (10.6ms)
+
+Devise::Mailer#confirmation_instructions: processed outbound mail in 332.5ms
+
+Sent mail to johnnie@morar.name (249.9ms)
+Date: Sat, 05 Mar 2016 15:35:45 -0500
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: johnnie@morar.name
+Message-ID: <56db432127c11_1e8d3fca95c5e208195e7@admins-MacBook-2.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome johnnie@morar.name to Bloccitoff, the to-do list that will change your life!</p>
+
+<p>Please confirm that this is your e-mail address and that your username is maximillian:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=Ut-g-bBL_isy3fTx2rSd">Confirm my account</a></p>
+
+  [1m[35m (2.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'jeica@volkmangrady.co' LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."confirmation_token" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["confirmation_token", "94739b16b0b63bee65c33b81e364b8d9a508db674d73ebacad39c9369a62bde7"]]
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("username", "email", "encrypted_password", "created_at", "updated_at", "confirmation_token", "confirmation_sent_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["username", "luella.kautzer"], ["email", "jeica@volkmangrady.co"], ["encrypted_password", "$2a$10$ofHf.1vB9Pdc2k4WF3BgRuuu1BEnBZ2VbdH8n86hiSBzsxNGxqkcO"], ["created_at", "2016-03-05 20:35:45.506629"], ["updated_at", "2016-03-05 20:35:45.506629"], ["confirmation_token", "19XRFV4Up-bUBhG_Fwpt"], ["confirmation_sent_at", "2016-03-05 20:35:45.508052"]]
+  Rendered devise/mailer/confirmation_instructions.html.erb (5.0ms)
+
+Devise::Mailer#confirmation_instructions: processed outbound mail in 49.5ms
+
+Sent mail to jeica@volkmangrady.co (197.1ms)
+Date: Sat, 05 Mar 2016 15:35:45 -0500
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: jeica@volkmangrady.co
+Message-ID: <56db4321893b3_1e8d3fca95c5e20819660@admins-MacBook-2.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome jeica@volkmangrady.co to Bloccitoff, the to-do list that will change your life!</p>
+
+<p>Please confirm that this is your e-mail address and that your username is luella.kautzer:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=19XRFV4Up-bUBhG_Fwpt">Confirm my account</a></p>
+
+  [1m[36m (3.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'alana@dubuque.org' LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."confirmation_token" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["confirmation_token", "8316174624e48cc6bac8e85935dfac3a6013b6cd368fe51ee44971d2aca06758"]]
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("username", "email", "encrypted_password", "created_at", "updated_at", "confirmation_token", "confirmation_sent_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["username", "amina.effertz"], ["email", "alana@dubuque.org"], ["encrypted_password", "$2a$10$rtvX18Tv/CldeL6plS/BsuldWR.Vf6v.5OGJdDFnFCQysqRpbi8X6"], ["created_at", "2016-03-05 20:35:45.859051"], ["updated_at", "2016-03-05 20:35:45.859051"], ["confirmation_token", "s8DM5yA6vbxc-6sD4SaR"], ["confirmation_sent_at", "2016-03-05 20:35:45.861136"]]
+  Rendered devise/mailer/confirmation_instructions.html.erb (3.8ms)
+
+Devise::Mailer#confirmation_instructions: processed outbound mail in 31.6ms
+
+Sent mail to alana@dubuque.org (929.2ms)
+Date: Sat, 05 Mar 2016 15:35:45 -0500
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: alana@dubuque.org
+Message-ID: <56db4321daf03_1e8d3fca95c5e208197f1@admins-MacBook-2.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome alana@dubuque.org to Bloccitoff, the to-do list that will change your life!</p>
+
+<p>Please confirm that this is your e-mail address and that your username is amina.effertz:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=s8DM5yA6vbxc-6sD4SaR">Confirm my account</a></p>
+
+  [1m[35m (2.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'terence.monahan@cruickshank.co' LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."confirmation_token" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["confirmation_token", "01858b929f764ba138a4bfbc5b2910f522f78f65018b6fe8a1525ff9d6e8aa09"]]
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("username", "email", "encrypted_password", "created_at", "updated_at", "confirmation_token", "confirmation_sent_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["username", "eugene.swaniawski"], ["email", "terence.monahan@cruickshank.co"], ["encrypted_password", "$2a$10$/dD/niv1kxrOClbRGWR.H.AKS/v/kZsSol38OrC6NSI8545L9CYFe"], ["created_at", "2016-03-05 20:35:46.924902"], ["updated_at", "2016-03-05 20:35:46.924902"], ["confirmation_token", "Ryr8kFFw8jrzTWMB8RMa"], ["confirmation_sent_at", "2016-03-05 20:35:46.925926"]]
+  Rendered devise/mailer/confirmation_instructions.html.erb (5.6ms)
+
+Devise::Mailer#confirmation_instructions: processed outbound mail in 35.8ms
+
+Sent mail to terence.monahan@cruickshank.co (638.2ms)
+Date: Sat, 05 Mar 2016 15:35:46 -0500
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: terence.monahan@cruickshank.co
+Message-ID: <56db4322eb9a0_1e8d3fca95c5e208198b3@admins-MacBook-2.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome terence.monahan@cruickshank.co to Bloccitoff, the to-do list that will change your life!</p>
+
+<p>Please confirm that this is your e-mail address and that your username is eugene.swaniawski:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=Ryr8kFFw8jrzTWMB8RMa">Confirm my account</a></p>
+
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'madilyn_ohara@boehm.name' LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."confirmation_token" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["confirmation_token", "290ba3b862245534089a97a01f26440f3afe041d5dfff33ede6eb8dca8f028b2"]]
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "users" ("username", "email", "encrypted_password", "created_at", "updated_at", "confirmation_token", "confirmation_sent_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["username", "isac_grady"], ["email", "madilyn_ohara@boehm.name"], ["encrypted_password", "$2a$10$lsH0I2RSzw1c2LwlO.ikqOrWB7LmoRvSMrmticvCF8d/63t71ku66"], ["created_at", "2016-03-05 20:35:47.700435"], ["updated_at", "2016-03-05 20:35:47.700435"], ["confirmation_token", "1TTz3xNoX_vZWvyncZar"], ["confirmation_sent_at", "2016-03-05 20:35:47.701585"]]
+  Rendered devise/mailer/confirmation_instructions.html.erb (3.7ms)
+
+Devise::Mailer#confirmation_instructions: processed outbound mail in 30.2ms
+
+Sent mail to madilyn_ohara@boehm.name (247.5ms)
+Date: Sat, 05 Mar 2016 15:35:47 -0500
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: madilyn_ohara@boehm.name
+Message-ID: <56db4323b3a27_1e8d3fca95c5e2081993b@admins-MacBook-2.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome madilyn_ohara@boehm.name to Bloccitoff, the to-do list that will change your life!</p>
+
+<p>Please confirm that this is your e-mail address and that your username is isac_grady:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=1TTz3xNoX_vZWvyncZar">Confirm my account</a></p>
+
+  [1m[35m (2.8ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (11.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'darius@koeppkihn.co' LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."confirmation_token" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["confirmation_token", "1442acfcba330bb751bd959f4aa62122a36fa25432826f8bd28ebd6d135c604a"]]
+  [1m[36mSQL (1.7ms)[0m  [1mINSERT INTO "users" ("username", "email", "encrypted_password", "created_at", "updated_at", "confirmation_token", "confirmation_sent_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["username", "crawford"], ["email", "darius@koeppkihn.co"], ["encrypted_password", "$2a$10$tTegKswFSCbP7k0uqRXRbOFkfXGIDUm1/U43ESlq.deYj3T52T3bm"], ["created_at", "2016-03-05 20:43:17.162073"], ["updated_at", "2016-03-05 20:43:17.162073"], ["confirmation_token", "LPzMWM2fXGK2ZYSyz1mn"], ["confirmation_sent_at", "2016-03-05 20:43:17.539671"]]
+  Rendered devise/mailer/confirmation_instructions.html.erb (9.1ms)
+
+Devise::Mailer#confirmation_instructions: processed outbound mail in 367.3ms
+
+Sent mail to darius@koeppkihn.co (284.7ms)
+Date: Sat, 05 Mar 2016 15:43:17 -0500
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: darius@koeppkihn.co
+Message-ID: <56db44e5e7117_1ea53fc94185e1f864249@admins-MacBook-2.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome darius@koeppkihn.co to Bloccitoff, the to-do list that will change your life!</p>
+
+<p>Please confirm that this is your e-mail address and that your username is crawford:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=LPzMWM2fXGK2ZYSyz1mn">Confirm my account</a></p>
+
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'pietro.ankunding@rueleffertz.net' LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."confirmation_token" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["confirmation_token", "de7b528c2176739774c7ad41c578d1c23a29e69ec57809979cb2c25fc83a64a8"]]
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("username", "email", "encrypted_password", "created_at", "updated_at", "confirmation_token", "confirmation_sent_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["username", "theron"], ["email", "pietro.ankunding@rueleffertz.net"], ["encrypted_password", "$2a$10$.eXwZtnkS9RI.BPwFoMrDeBRBGkQYkqLMtz1WsamQfmSqhxufpH.a"], ["created_at", "2016-03-05 20:43:18.327028"], ["updated_at", "2016-03-05 20:43:18.327028"], ["confirmation_token", "z2z-4fQzenQyq7G2GqPK"], ["confirmation_sent_at", "2016-03-05 20:43:18.328087"]]
+  Rendered devise/mailer/confirmation_instructions.html.erb (4.0ms)
+
+Devise::Mailer#confirmation_instructions: processed outbound mail in 31.3ms
+
+Sent mail to pietro.ankunding@rueleffertz.net (232.5ms)
+Date: Sat, 05 Mar 2016 15:43:18 -0500
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: pietro.ankunding@rueleffertz.net
+Message-ID: <56db44e658976_1ea53fc94185e1f864369@admins-MacBook-2.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome pietro.ankunding@rueleffertz.net to Bloccitoff, the to-do list that will change your life!</p>
+
+<p>Please confirm that this is your e-mail address and that your username is theron:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=z2z-4fQzenQyq7G2GqPK">Confirm my account</a></p>
+
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'tony@blockspinka.io' LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."confirmation_token" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["confirmation_token", "251c9c9bb88b7e4acddec264ad08e05a69eb755844b153a6a0002398a8bb0b55"]]
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("username", "email", "encrypted_password", "created_at", "updated_at", "confirmation_token", "confirmation_sent_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["username", "pietro"], ["email", "tony@blockspinka.io"], ["encrypted_password", "$2a$10$GcrtdCvWyTf3TXKyJ8qKTeTwpZU05MoqdIz3Pbk9qdwgvv6yJMvm6"], ["created_at", "2016-03-05 20:43:18.692563"], ["updated_at", "2016-03-05 20:43:18.692563"], ["confirmation_token", "WHDk1fXQeVcUR7uSr4MQ"], ["confirmation_sent_at", "2016-03-05 20:43:18.693618"]]
+  Rendered devise/mailer/confirmation_instructions.html.erb (3.6ms)
+
+Devise::Mailer#confirmation_instructions: processed outbound mail in 30.6ms
+
+Sent mail to tony@blockspinka.io (199.9ms)
+Date: Sat, 05 Mar 2016 15:43:18 -0500
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: tony@blockspinka.io
+Message-ID: <56db44e6b1b06_1ea53fc94185e1f8644f5@admins-MacBook-2.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome tony@blockspinka.io to Bloccitoff, the to-do list that will change your life!</p>
+
+<p>Please confirm that this is your e-mail address and that your username is pietro:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=WHDk1fXQeVcUR7uSr4MQ">Confirm my account</a></p>
+
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'teresa.reilly@ankunding.org' LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."confirmation_token" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["confirmation_token", "956360d72e8609af2fb1085935900987aebe7f1f397d89866bae048b50e53791"]]
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("username", "email", "encrypted_password", "created_at", "updated_at", "confirmation_token", "confirmation_sent_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["username", "jovan"], ["email", "teresa.reilly@ankunding.org"], ["encrypted_password", "$2a$10$lCnrfoZ9IG1fmlP1EmA.G.NAKNYFVdRlXRrQueG8VG3aFPz72I/Zi"], ["created_at", "2016-03-05 20:43:19.023134"], ["updated_at", "2016-03-05 20:43:19.023134"], ["confirmation_token", "YxsyrssSg-gwcU9x3GiM"], ["confirmation_sent_at", "2016-03-05 20:43:19.024165"]]
+  Rendered devise/mailer/confirmation_instructions.html.erb (3.7ms)
+
+Devise::Mailer#confirmation_instructions: processed outbound mail in 32.5ms
+
+Sent mail to teresa.reilly@ankunding.org (220.2ms)
+Date: Sat, 05 Mar 2016 15:43:19 -0500
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: teresa.reilly@ankunding.org
+Message-ID: <56db44e7eaac_1ea53fc94185e1f864517@admins-MacBook-2.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome teresa.reilly@ankunding.org to Bloccitoff, the to-do list that will change your life!</p>
+
+<p>Please confirm that this is your e-mail address and that your username is jovan:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=YxsyrssSg-gwcU9x3GiM">Confirm my account</a></p>
+
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'kylee@handwest.com' LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."confirmation_token" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["confirmation_token", "48c624e0580d2f6b55d926ba6058bd88b4f70ff930fc0f4a4d15147e4d76ffaf"]]
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("username", "email", "encrypted_password", "created_at", "updated_at", "confirmation_token", "confirmation_sent_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["username", "thad"], ["email", "kylee@handwest.com"], ["encrypted_password", "$2a$10$KDDn3pTj6VmQKO6mQhsJDu0kxi4uV7Ao9sVR8k4Q54p9AaUjlpS2m"], ["created_at", "2016-03-05 20:43:19.376501"], ["updated_at", "2016-03-05 20:43:19.376501"], ["confirmation_token", "ctNwNFzzpTTAjR9a-pt8"], ["confirmation_sent_at", "2016-03-05 20:43:19.377561"]]
+  Rendered devise/mailer/confirmation_instructions.html.erb (4.3ms)
+
+Devise::Mailer#confirmation_instructions: processed outbound mail in 31.9ms
+
+Sent mail to kylee@handwest.com (288.9ms)
+Date: Sat, 05 Mar 2016 15:43:19 -0500
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: kylee@handwest.com
+Message-ID: <56db44e764e8e_1ea53fc94185e1f86467d@admins-MacBook-2.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome kylee@handwest.com to Bloccitoff, the to-do list that will change your life!</p>
+
+<p>Please confirm that this is your e-mail address and that your username is thad:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=ctNwNFzzpTTAjR9a-pt8">Confirm my account</a></p>
+
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUser Exists (12.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'teagan_johns@von.co' LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."confirmation_token" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["confirmation_token", "15a5cb969cc6d1e9e4771114f76f58b34b853c1f33346967f7e3795ee31df9d7"]]
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "users" ("username", "email", "encrypted_password", "created_at", "updated_at", "confirmation_token", "confirmation_sent_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["username", "lola"], ["email", "teagan_johns@von.co"], ["encrypted_password", "$2a$10$SeVBlIb9up2eGPkXFe6VFeiwsSnwRJJ258Zn7E5HQm.c/.yd2LW56"], ["created_at", "2016-03-05 20:44:25.134924"], ["updated_at", "2016-03-05 20:44:25.134924"], ["confirmation_token", "oVz9VXpYcWDP6MoZqsxi"], ["confirmation_sent_at", "2016-03-05 20:44:25.536900"]]
+  Rendered devise/mailer/confirmation_instructions.html.erb (9.9ms)
+
+Devise::Mailer#confirmation_instructions: processed outbound mail in 770.2ms
+
+Sent mail to teagan_johns@von.co (1086.4ms)
+Date: Sat, 05 Mar 2016 15:44:26 -0500
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: teagan_johns@von.co
+Message-ID: <56db452a5eae5_1eac3fc76a45e1f81388@admins-MacBook-2.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome teagan_johns@von.co to Bloccitoff, the to-do list that will change your life!</p>
+
+<p>Please confirm that this is your e-mail address and that your username is lola:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=oVz9VXpYcWDP6MoZqsxi">Confirm my account</a></p>
+
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'manuela_gorczany@jacobson.net' LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."confirmation_token" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["confirmation_token", "4b2b0d8da99a622862984c090c8c94de70d057cb4d1f803a1edea86738aa48ee"]]
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("username", "email", "encrypted_password", "created_at", "updated_at", "confirmation_token", "confirmation_sent_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["username", "mina"], ["email", "manuela_gorczany@jacobson.net"], ["encrypted_password", "$2a$10$/KyEuu2VE/ZJkHMjK68QWeaFBiTQlK3Q7pFh9QmeJD/Q.IOOJCBEa"], ["created_at", "2016-03-05 20:44:27.613881"], ["updated_at", "2016-03-05 20:44:27.613881"], ["confirmation_token", "WPAdFLqn-43s_oSyKnT4"], ["confirmation_sent_at", "2016-03-05 20:44:27.615627"]]
+  Rendered devise/mailer/confirmation_instructions.html.erb (4.2ms)
+
+Devise::Mailer#confirmation_instructions: processed outbound mail in 48.0ms
+
+Sent mail to manuela_gorczany@jacobson.net (425.0ms)
+Date: Sat, 05 Mar 2016 15:44:27 -0500
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: manuela_gorczany@jacobson.net
+Message-ID: <56db452ba3e2b_1eac3fc76a45e1f8139f@admins-MacBook-2.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome manuela_gorczany@jacobson.net to Bloccitoff, the to-do list that will change your life!</p>
+
+<p>Please confirm that this is your e-mail address and that your username is mina:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=WPAdFLqn-43s_oSyKnT4">Confirm my account</a></p>
+
+  [1m[36m (3.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'frances_waters@waters.io' LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."confirmation_token" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["confirmation_token", "82ae4b4ae3714cd2fe4fa0cde2284b644ee37a96770f68fd2346429ebde29f35"]]
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "users" ("username", "email", "encrypted_password", "created_at", "updated_at", "confirmation_token", "confirmation_sent_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["username", "hiram"], ["email", "frances_waters@waters.io"], ["encrypted_password", "$2a$10$xc4Ni7CLQ8a0/SiJB.5jDuJyjzXDgpJrYIgRCFGQ0ZRvPcJ0hhqYe"], ["created_at", "2016-03-05 20:44:28.215822"], ["updated_at", "2016-03-05 20:44:28.215822"], ["confirmation_token", "UDCQqAWsjZsvD_ECtq7j"], ["confirmation_sent_at", "2016-03-05 20:44:28.217095"]]
+  Rendered devise/mailer/confirmation_instructions.html.erb (3.9ms)
+
+Devise::Mailer#confirmation_instructions: processed outbound mail in 36.6ms
+
+Sent mail to frances_waters@waters.io (323.3ms)
+Date: Sat, 05 Mar 2016 15:44:28 -0500
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: frances_waters@waters.io
+Message-ID: <56db452c3f470_1eac3fc76a45e1f814074@admins-MacBook-2.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome frances_waters@waters.io to Bloccitoff, the to-do list that will change your life!</p>
+
+<p>Please confirm that this is your e-mail address and that your username is hiram:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=UDCQqAWsjZsvD_ECtq7j">Confirm my account</a></p>
+
+  [1m[35m (16.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'tyrell@auer.co' LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."confirmation_token" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["confirmation_token", "571d05d3dbc412b1b6ae6c49281234c8aa626bf31b2a2a644c07b6a6dc9e91ea"]]
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("username", "email", "encrypted_password", "created_at", "updated_at", "confirmation_token", "confirmation_sent_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["username", "leann.schoen"], ["email", "tyrell@auer.co"], ["encrypted_password", "$2a$10$uQVKHmiWJ9N8J2ltGeLzmemWNA.NiHeZJc4iciEpCe5599Kwzgg6u"], ["created_at", "2016-03-05 20:44:28.738482"], ["updated_at", "2016-03-05 20:44:28.738482"], ["confirmation_token", "FBwzBSy_WGRWybzwjbyM"], ["confirmation_sent_at", "2016-03-05 20:44:28.740378"]]
+  Rendered devise/mailer/confirmation_instructions.html.erb (4.7ms)
+
+Devise::Mailer#confirmation_instructions: processed outbound mail in 48.6ms
+
+Sent mail to tyrell@auer.co (285.2ms)
+Date: Sat, 05 Mar 2016 15:44:28 -0500
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: tyrell@auer.co
+Message-ID: <56db452cc1819_1eac3fc76a45e1f814135@admins-MacBook-2.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome tyrell@auer.co to Bloccitoff, the to-do list that will change your life!</p>
+
+<p>Please confirm that this is your e-mail address and that your username is leann.schoen:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=FBwzBSy_WGRWybzwjbyM">Confirm my account</a></p>
+
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'pascale_kemmer@zieme.info' LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."confirmation_token" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["confirmation_token", "0efa707ece7ba565b569df0bb69d62af8921e9066bf6a0b9e337b3666d06b56e"]]
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("username", "email", "encrypted_password", "created_at", "updated_at", "confirmation_token", "confirmation_sent_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["username", "alf"], ["email", "pascale_kemmer@zieme.info"], ["encrypted_password", "$2a$10$mjGUJ98B74y.dlIUNrjL7OBGZPPAIxgZG0NDpgg1ablPpP/oXgPXq"], ["created_at", "2016-03-05 20:44:29.177132"], ["updated_at", "2016-03-05 20:44:29.177132"], ["confirmation_token", "EMmbyLQD7CxF5QeWZDRB"], ["confirmation_sent_at", "2016-03-05 20:44:29.178277"]]
+  Rendered devise/mailer/confirmation_instructions.html.erb (4.5ms)
+
+Devise::Mailer#confirmation_instructions: processed outbound mail in 33.7ms
+
+Sent mail to pascale_kemmer@zieme.info (288.2ms)
+Date: Sat, 05 Mar 2016 15:44:29 -0500
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: pascale_kemmer@zieme.info
+Message-ID: <56db452d34983_1eac3fc76a45e1f8142cc@admins-MacBook-2.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome pascale_kemmer@zieme.info to Bloccitoff, the to-do list that will change your life!</p>
+
+<p>Please confirm that this is your e-mail address and that your username is alf:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=EMmbyLQD7CxF5QeWZDRB">Confirm my account</a></p>
+
+  [1m[35m (27.3ms)[0m  commit transaction
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "items" ("user_id", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 8], ["name", "Poutine meh tilde butcher whatever."], ["created_at", "2016-03-05 20:44:29.604737"], ["updated_at", "2016-03-05 20:44:29.604737"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "items" ("user_id", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_id", 18], ["name", "Synth meh celiac brooklyn kogi leggings tofu waistcoat blue bottle."], ["created_at", "2016-03-05 20:44:29.609732"], ["updated_at", "2016-03-05 20:44:29.609732"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "items" ("user_id", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 9], ["name", "Mumblecore humblebrag cornhole godard heirloom direct trade marfa."], ["created_at", "2016-03-05 20:44:29.614048"], ["updated_at", "2016-03-05 20:44:29.614048"]]
+  [1m[35m (2.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "items" ("user_id", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_id", 11], ["name", "Shabby chic roof mumblecore pour-over single-origin coffee mixtape."], ["created_at", "2016-03-05 20:44:29.619068"], ["updated_at", "2016-03-05 20:44:29.619068"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "items" ("user_id", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 16], ["name", "Chicharrones tumblr flannel blog squid listicle."], ["created_at", "2016-03-05 20:44:29.622947"], ["updated_at", "2016-03-05 20:44:29.622947"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "items" ("user_id", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_id", 12], ["name", "90's carry pbr&b craft beer meh."], ["created_at", "2016-03-05 20:44:29.626959"], ["updated_at", "2016-03-05 20:44:29.626959"]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "items" ("user_id", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 8], ["name", "Normcore echo pbr&b fap church-key."], ["created_at", "2016-03-05 20:44:29.632766"], ["updated_at", "2016-03-05 20:44:29.632766"]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "items" ("user_id", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_id", 12], ["name", "Hella flexitarian kinfolk kale chips mlkshk pug offal banjo."], ["created_at", "2016-03-05 20:44:29.637429"], ["updated_at", "2016-03-05 20:44:29.637429"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "items" ("user_id", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 3], ["name", "Humblebrag neutra single-origin coffee lumbersexual."], ["created_at", "2016-03-05 20:44:29.642044"], ["updated_at", "2016-03-05 20:44:29.642044"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "items" ("user_id", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_id", 6], ["name", "Banjo shabby chic everyday bicycle rights ennui gluten-free."], ["created_at", "2016-03-05 20:44:29.646855"], ["updated_at", "2016-03-05 20:44:29.646855"]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "items" ("user_id", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 8], ["name", "You probably haven't heard of them offal xoxo chambray."], ["created_at", "2016-03-05 20:44:29.652151"], ["updated_at", "2016-03-05 20:44:29.652151"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "items" ("user_id", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_id", 13], ["name", "Jean shorts viral mumblecore banjo twee authentic farm-to-table roof."], ["created_at", "2016-03-05 20:44:29.656233"], ["updated_at", "2016-03-05 20:44:29.656233"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "items" ("user_id", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 20], ["name", "Thundercats you probably haven't heard of them green juice literally paleo irony lumbersexual brunch kale chips."], ["created_at", "2016-03-05 20:44:29.660096"], ["updated_at", "2016-03-05 20:44:29.660096"]]
+  [1m[35m (2.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "items" ("user_id", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_id", 6], ["name", "Photo booth seitan keytar normcore plaid readymade church-key craft beer."], ["created_at", "2016-03-05 20:44:29.665684"], ["updated_at", "2016-03-05 20:44:29.665684"]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "items" ("user_id", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 15], ["name", "Pinterest dreamcatcher tote bag artisan sustainable."], ["created_at", "2016-03-05 20:44:29.671046"], ["updated_at", "2016-03-05 20:44:29.671046"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "items" ("user_id", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_id", 16], ["name", "Food truck carry before they sold out cliche craft beer messenger bag quinoa."], ["created_at", "2016-03-05 20:44:29.675300"], ["updated_at", "2016-03-05 20:44:29.675300"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "items" ("user_id", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 2], ["name", "Literally health meh wes anderson food truck kombucha quinoa thundercats."], ["created_at", "2016-03-05 20:44:29.679957"], ["updated_at", "2016-03-05 20:44:29.679957"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "items" ("user_id", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_id", 10], ["name", "Heirloom knausgaard humblebrag chillwave street blog."], ["created_at", "2016-03-05 20:44:29.683831"], ["updated_at", "2016-03-05 20:44:29.683831"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "items" ("user_id", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 17], ["name", "Meh wolf pop-up cronut narwhal poutine twee kombucha."], ["created_at", "2016-03-05 20:44:29.688381"], ["updated_at", "2016-03-05 20:44:29.688381"]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "items" ("user_id", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_id", 14], ["name", "Pug knausgaard jean shorts fingerstache five dollar toast."], ["created_at", "2016-03-05 20:44:29.694563"], ["updated_at", "2016-03-05 20:44:29.694563"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUser Exists (11.7ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'savanah.schmitt@schambergerrenner.biz' LIMIT 1[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."confirmation_token" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["confirmation_token", "86b54efdffa128925a5fbff5184a35c6a674a8e0a244109188547569e2a6ee45"]]
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "users" ("username", "email", "encrypted_password", "created_at", "updated_at", "confirmation_token", "confirmation_sent_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["username", "liana_wiza"], ["email", "savanah.schmitt@schambergerrenner.biz"], ["encrypted_password", "$2a$10$6N3q2BvdtPy0Lq5QHv70.eldjVJl78BuRsHWM7YAdTAONj/3B5tpa"], ["created_at", "2016-03-05 20:45:00.127239"], ["updated_at", "2016-03-05 20:45:00.127239"], ["confirmation_token", "943yeMDhzZJyctB53myq"], ["confirmation_sent_at", "2016-03-05 20:45:00.505169"]]
+  Rendered devise/mailer/confirmation_instructions.html.erb (8.9ms)
+
+Devise::Mailer#confirmation_instructions: processed outbound mail in 344.7ms
+
+Sent mail to savanah.schmitt@schambergerrenner.biz (309.7ms)
+Date: Sat, 05 Mar 2016 15:45:00 -0500
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: savanah.schmitt@schambergerrenner.biz
+Message-ID: <56db454cd942f_1eb43ff22885e1fc84419@admins-MacBook-2.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome savanah.schmitt@schambergerrenner.biz to Bloccitoff, the to-do list that will change your life!</p>
+
+<p>Please confirm that this is your e-mail address and that your username is liana_wiza:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=943yeMDhzZJyctB53myq">Confirm my account</a></p>
+
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'adrian@carter.name' LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."confirmation_token" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["confirmation_token", "4284132de0193e8d83fe0b21467f926f0eea3e345316c6d68351a759f3188f85"]]
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("username", "email", "encrypted_password", "created_at", "updated_at", "confirmation_token", "confirmation_sent_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["username", "felton_jacobi"], ["email", "adrian@carter.name"], ["encrypted_password", "$2a$10$h.pFAzbAdyFlN.RTl4bI.e9DzUZtOO7hsKk3ArcNj//bIuEigl6r6"], ["created_at", "2016-03-05 20:45:01.292039"], ["updated_at", "2016-03-05 20:45:01.292039"], ["confirmation_token", "jKNRPUGUczxTq-7zD2Uz"], ["confirmation_sent_at", "2016-03-05 20:45:01.293166"]]
+  Rendered devise/mailer/confirmation_instructions.html.erb (3.6ms)
+
+Devise::Mailer#confirmation_instructions: processed outbound mail in 27.9ms
+
+Sent mail to adrian@carter.name (301.2ms)
+Date: Sat, 05 Mar 2016 15:45:01 -0500
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: adrian@carter.name
+Message-ID: <56db454d4f7f3_1eb43ff22885e1fc845e1@admins-MacBook-2.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome adrian@carter.name to Bloccitoff, the to-do list that will change your life!</p>
+
+<p>Please confirm that this is your e-mail address and that your username is felton_jacobi:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=jKNRPUGUczxTq-7zD2Uz">Confirm my account</a></p>
+
+  [1m[36m (2.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'kendall.shields@rosenbaumrunolfsdottir.biz' LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."confirmation_token" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["confirmation_token", "098f413f3272819879366d8d9559a4224bca7adf331cce808f3b4e1515ba1bdf"]]
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("username", "email", "encrypted_password", "created_at", "updated_at", "confirmation_token", "confirmation_sent_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["username", "calista_goldner"], ["email", "kendall.shields@rosenbaumrunolfsdottir.biz"], ["encrypted_password", "$2a$10$On9XIK13HDI5OL7Znyn74Oz83N5rMuHb9OgaqmZpXnU/Cltw9fY1m"], ["created_at", "2016-03-05 20:45:01.724596"], ["updated_at", "2016-03-05 20:45:01.724596"], ["confirmation_token", "7NHbntTxXYa4z8RSwNMQ"], ["confirmation_sent_at", "2016-03-05 20:45:01.725778"]]
+  Rendered devise/mailer/confirmation_instructions.html.erb (5.2ms)
+
+Devise::Mailer#confirmation_instructions: processed outbound mail in 33.8ms
+
+Sent mail to kendall.shields@rosenbaumrunolfsdottir.biz (230.7ms)
+Date: Sat, 05 Mar 2016 15:45:01 -0500
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: kendall.shields@rosenbaumrunolfsdottir.biz
+Message-ID: <56db454dba5d1_1eb43ff22885e1fc8461e@admins-MacBook-2.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome kendall.shields@rosenbaumrunolfsdottir.biz to Bloccitoff, the to-do list that will change your life!</p>
+
+<p>Please confirm that this is your e-mail address and that your username is calista_goldner:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=7NHbntTxXYa4z8RSwNMQ">Confirm my account</a></p>
+
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'beulah.conn@jacobson.biz' LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."confirmation_token" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["confirmation_token", "704fa695b95e3969bb6e54ac86497c794c8c4d9f0f785fe8e754bf61b928e1c5"]]
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "users" ("username", "email", "encrypted_password", "created_at", "updated_at", "confirmation_token", "confirmation_sent_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["username", "timmy"], ["email", "beulah.conn@jacobson.biz"], ["encrypted_password", "$2a$10$4fJQ1S9KIUUa5/pOTvG/PuTZbrzKtcvOj3Y7/Cs6xe4Cl.DF72ivq"], ["created_at", "2016-03-05 20:45:02.093367"], ["updated_at", "2016-03-05 20:45:02.093367"], ["confirmation_token", "DQHzxUUfmd8SK9eUxzh7"], ["confirmation_sent_at", "2016-03-05 20:45:02.094427"]]
+  Rendered devise/mailer/confirmation_instructions.html.erb (4.1ms)
+
+Devise::Mailer#confirmation_instructions: processed outbound mail in 32.3ms
+
+Sent mail to beulah.conn@jacobson.biz (277.7ms)
+Date: Sat, 05 Mar 2016 15:45:02 -0500
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: beulah.conn@jacobson.biz
+Message-ID: <56db454e1ff74_1eb43ff22885e1fc84780@admins-MacBook-2.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome beulah.conn@jacobson.biz to Bloccitoff, the to-do list that will change your life!</p>
+
+<p>Please confirm that this is your e-mail address and that your username is timmy:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=DQHzxUUfmd8SK9eUxzh7">Confirm my account</a></p>
+
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'darion.bergnaum@boyle.biz' LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."confirmation_token" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["confirmation_token", "c0b153d1bfa96a1c4d7b9499fb9012bbef53704d3ac1399fffa0cf53e960b208"]]
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("username", "email", "encrypted_password", "created_at", "updated_at", "confirmation_token", "confirmation_sent_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["username", "lula"], ["email", "darion.bergnaum@boyle.biz"], ["encrypted_password", "$2a$10$5flFM0NseLjpdGLY/aHeAeXduyE.lBa0kLFqrcSQkz3/TWhXiRaEC"], ["created_at", "2016-03-05 20:45:02.506560"], ["updated_at", "2016-03-05 20:45:02.506560"], ["confirmation_token", "nMsN_NVcNvtHRaJPjFnk"], ["confirmation_sent_at", "2016-03-05 20:45:02.507695"]]
+  Rendered devise/mailer/confirmation_instructions.html.erb (5.4ms)
+
+Devise::Mailer#confirmation_instructions: processed outbound mail in 31.3ms
+
+Sent mail to darion.bergnaum@boyle.biz (516.3ms)
+Date: Sat, 05 Mar 2016 15:45:02 -0500
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: darion.bergnaum@boyle.biz
+Message-ID: <56db454e848b4_1eb43ff22885e1fc84869@admins-MacBook-2.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome darion.bergnaum@boyle.biz to Bloccitoff, the to-do list that will change your life!</p>
+
+<p>Please confirm that this is your e-mail address and that your username is lula:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=nMsN_NVcNvtHRaJPjFnk">Confirm my account</a></p>
+
+  [1m[35m (2.5ms)[0m  commit transaction
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (17.1ms)[0m  [1mINSERT INTO "items" ("user_id", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 20], ["name", "Five dollar toast letterpress irony thundercats seitan normcore."], ["created_at", "2016-03-05 20:45:03.119846"], ["updated_at", "2016-03-05 20:45:03.119846"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "items" ("user_id", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_id", 24], ["name", "Shoreditch lumbersexual forage fanny pack swag mustache."], ["created_at", "2016-03-05 20:45:03.141002"], ["updated_at", "2016-03-05 20:45:03.141002"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "items" ("user_id", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 12], ["name", "Etsy diy blue bottle shoreditch venmo."], ["created_at", "2016-03-05 20:45:03.144618"], ["updated_at", "2016-03-05 20:45:03.144618"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "items" ("user_id", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_id", 1], ["name", "Yolo pbr&b stumptown shabby chic schlitz crucifix yuccie."], ["created_at", "2016-03-05 20:45:03.150025"], ["updated_at", "2016-03-05 20:45:03.150025"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "items" ("user_id", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 21], ["name", "Messenger bag neutra heirloom disrupt kogi kombucha farm-to-table authentic fingerstache."], ["created_at", "2016-03-05 20:45:03.153783"], ["updated_at", "2016-03-05 20:45:03.153783"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "items" ("user_id", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_id", 21], ["name", "Semiotics brunch pop-up occupy."], ["created_at", "2016-03-05 20:45:03.157666"], ["updated_at", "2016-03-05 20:45:03.157666"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "items" ("user_id", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 17], ["name", "Everyday kitsch umami synth."], ["created_at", "2016-03-05 20:45:03.161847"], ["updated_at", "2016-03-05 20:45:03.161847"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "items" ("user_id", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_id", 13], ["name", "Banjo stumptown selvage squid listicle."], ["created_at", "2016-03-05 20:45:03.166475"], ["updated_at", "2016-03-05 20:45:03.166475"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "items" ("user_id", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 15], ["name", "Banh mi poutine normcore lumbersexual hoodie ennui williamsburg."], ["created_at", "2016-03-05 20:45:03.172446"], ["updated_at", "2016-03-05 20:45:03.172446"]]
+  [1m[35m (3.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "items" ("user_id", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_id", 9], ["name", "Williamsburg kickstarter venmo art party microdosing etsy vegan."], ["created_at", "2016-03-05 20:45:03.179647"], ["updated_at", "2016-03-05 20:45:03.179647"]]
+  [1m[36m (3.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "items" ("user_id", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 25], ["name", "Quinoa twee pug you probably haven't heard of them literally slow-carb wes anderson cleanse."], ["created_at", "2016-03-05 20:45:03.187564"], ["updated_at", "2016-03-05 20:45:03.187564"]]
+  [1m[35m (23.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "items" ("user_id", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_id", 9], ["name", "Hoodie single-origin coffee roof diy."], ["created_at", "2016-03-05 20:45:03.214684"], ["updated_at", "2016-03-05 20:45:03.214684"]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (2.8ms)[0m  [1mINSERT INTO "items" ("user_id", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 20], ["name", "Farm-to-table everyday truffaut mixtape kombucha blog."], ["created_at", "2016-03-05 20:45:03.220585"], ["updated_at", "2016-03-05 20:45:03.220585"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.2ms)[0m  INSERT INTO "items" ("user_id", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_id", 17], ["name", "Ramps kitsch tote bag thundercats iphone meditation paleo austin."], ["created_at", "2016-03-05 20:45:03.227559"], ["updated_at", "2016-03-05 20:45:03.227559"]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "items" ("user_id", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 25], ["name", "Helvetica flexitarian everyday cornhole +1 jean shorts pop-up."], ["created_at", "2016-03-05 20:45:03.234258"], ["updated_at", "2016-03-05 20:45:03.234258"]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "items" ("user_id", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_id", 10], ["name", "Tousled health street tacos migas."], ["created_at", "2016-03-05 20:45:03.239992"], ["updated_at", "2016-03-05 20:45:03.239992"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "items" ("user_id", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 2], ["name", "Retro schlitz meh post-ironic austin pork belly."], ["created_at", "2016-03-05 20:45:03.249550"], ["updated_at", "2016-03-05 20:45:03.249550"]]
+  [1m[35m (7.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (21.7ms)[0m  INSERT INTO "items" ("user_id", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_id", 20], ["name", "Farm-to-table shabby chic neutra readymade post-ironic meggings intelligentsia cronut flannel."], ["created_at", "2016-03-05 20:45:03.260270"], ["updated_at", "2016-03-05 20:45:03.260270"]]
+  [1m[36m (4.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "items" ("user_id", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 6], ["name", "Salvia sustainable synth lomo."], ["created_at", "2016-03-05 20:45:03.300633"], ["updated_at", "2016-03-05 20:45:03.300633"]]
+  [1m[35m (4.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "items" ("user_id", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_id", 6], ["name", "Fanny pack tousled everyday sartorial."], ["created_at", "2016-03-05 20:45:03.317097"], ["updated_at", "2016-03-05 20:45:03.317097"]]
+  [1m[36m (3.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "items"[0m
