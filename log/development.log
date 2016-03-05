@@ -9757,3 +9757,1079 @@ Processing by UsersController#show as HTML
   [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
   Rendered users/show.html.erb within layouts/application (2.8ms)
 Completed 200 OK in 109ms (Views: 107.2ms | ActiveRecord: 0.3ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateItems (20160305135939)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.5ms)[0m  [1mCREATE  INDEX "index_items_on_user_id" ON "items" ("user_id")[0m
+  [1m[35mSQL (14.8ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160305135939"]]
+  [1m[36m (14.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_items_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_items_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_username' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_username' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+
+
+Started GET "/" for ::1 at 2016-03-05 10:18:28 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.3ms)
+  [1m[35mUser Load (14.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+Completed 200 OK in 4865ms (Views: 4778.1ms | ActiveRecord: 14.6ms)
+
+
+Started GET "/assets/items.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-05 10:18:37 -0500
+
+
+Started GET "/assets/items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-05 10:18:37 -0500
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-03-05 10:18:50 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"8lmMJxB8+li29GFMbdYnE7UiVTvZoZ0hg79HLYCwuVj8e7oJMo3ddfq7I75Vd81mXar5f18SA7KF8WU0qsK+Vg=="}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 170ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-03-05 10:18:50 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 207ms (Views: 206.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-03-05 10:18:53 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (30.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (233.3ms)
+Completed 200 OK in 402ms (Views: 399.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-03-05 10:19:03 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WywyKDzYwWOUBjOMbPbL+H/VP+q3DUBsHfXbwtjWdk0kCXWISQnQji6Es8aSxyliFvbFOwV8s+FHnTimqTlh9w==", "user"=>{"email"=>"ekeast328@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (15.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "ekeast328@gmail.com"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2016-03-05 01:33:52.512946"], ["current_sign_in_at", "2016-03-05 15:19:03.659397"], ["sign_in_count", 18], ["updated_at", "2016-03-05 15:19:03.661391"], ["id", 3]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 215ms (ActiveRecord: 17.9ms)
+
+
+Started GET "/users/3" for ::1 at 2016-03-05 10:19:03 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  Rendered users/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 170ms (Views: 125.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/edit" for ::1 at 2016-03-05 10:19:21 -0500
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  Rendered devise/registrations/edit.html.erb within layouts/application (55.2ms)
+Completed 200 OK in 239ms (Views: 231.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/3" for ::1 at 2016-03-05 10:19:27 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  Rendered users/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 149ms (Views: 146.9ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-03-05 10:19:32 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"tPYSNmlrtWkscVuypPAY+ubDcgv1F2vHXspLjxJi5AtaopYpAAzUMurazxAZ09Cl7liTSZ96ZnbT8iHt2Pw3ug=="}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-03-05 10:19:32 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 134ms (Views: 133.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-03-05 10:23:14 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (32.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (141.6ms)
+Completed 200 OK in 888ms (Views: 862.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-03-05 10:23:22 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BKigAA9JPt3f3VXP8D5jrwXDIDnCkDOc1p0pEIADAlkW2zD5cjUANRv44ZRHCSl1OFsQjUZ1Uy5qgNUiCto83g==", "user"=>{"email"=>"ekeast328@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (12.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "ekeast328@gmail.com"]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2016-03-05 15:19:03.659397"], ["current_sign_in_at", "2016-03-05 15:23:22.860224"], ["sign_in_count", 19], ["updated_at", "2016-03-05 15:23:22.863108"], ["id", 3]]
+  [1m[36m (9.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 164ms (ActiveRecord: 22.1ms)
+
+
+Started GET "/users/3" for ::1 at 2016-03-05 10:23:23 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (12.7ms)[0m  [1mINSERT INTO "items" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2016-03-05 15:23:23.144762"], ["updated_at", "2016-03-05 15:23:23.144762"]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  Rendered items/_form.html.erb (16.2ms)
+  Rendered users/show.html.erb within layouts/application (112.7ms)
+Completed 500 Internal Server Error in 144ms (ActiveRecord: 15.3ms)
+
+SyntaxError (/Users/admin/bloc/blocitoff/app/views/items/_form.html.erb:2: syntax error, unexpected keyword_do_block, expecting keyword_end
+...ppend=  form_for[user, item] do |f| @output_buffer.safe_appe...
+...                               ^
+/Users/admin/bloc/blocitoff/app/views/items/_form.html.erb:10: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/items/_form.html.erb:2: syntax error, unexpected keyword_do_block, expecting keyword_end
+  app/views/items/_form.html.erb:10: syntax error, unexpected keyword_ensure, expecting end-of-input
+  app/views/users/show.html.erb:12:in `_app_views_users_show_html_erb__2475862723174439956_70355882808840'
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (16.8ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.9ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (115.4ms)
+
+
+Started GET "/" for ::1 at 2016-03-05 10:27:06 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 416ms (Views: 401.3ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-03-05 10:27:10 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"zM7tOZjD9MnaWYzEyzfoF7JAhb3tcEeI2OWPZ5YJNtf/sWqqlV7R+hT3TEk5d+c9i+tyg5+Q28E+zEiZR8oJ2Q=="}
+  [1m[35mUser Load (1.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 20ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/" for ::1 at 2016-03-05 10:27:10 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 109ms (Views: 106.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-03-05 10:27:12 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (15.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (74.7ms)
+Completed 200 OK in 192ms (Views: 189.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-03-05 10:27:19 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PcdDZxX8BQlSHoFF+B5RZk5uHjdLkUbmXmklttIu2F/BKEcq426st8lqvRg+zs9XgE7M6JIyYSt77W+votnc8A==", "user"=>{"email"=>"ekeast328@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "ekeast328@gmail.com"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2016-03-05 15:23:22.860224"], ["current_sign_in_at", "2016-03-05 15:27:19.134328"], ["sign_in_count", 20], ["updated_at", "2016-03-05 15:27:19.136010"], ["id", 3]]
+  [1m[35m (1.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 124ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/users/3" for ::1 at 2016-03-05 10:27:19 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "items" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2016-03-05 15:27:19.176185"], ["updated_at", "2016-03-05 15:27:19.176185"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  Rendered items/_form.html.erb (1.2ms)
+  Rendered users/show.html.erb within layouts/application (9.4ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 2.5ms)
+
+SyntaxError (/Users/admin/bloc/blocitoff/app/views/items/_form.html.erb:2: syntax error, unexpected keyword_do_block, expecting keyword_end
+...ppend=  form_for[user, item] do |f| @output_buffer.safe_appe...
+...                               ^
+/Users/admin/bloc/blocitoff/app/views/items/_form.html.erb:10: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/items/_form.html.erb:2: syntax error, unexpected keyword_do_block, expecting keyword_end
+  app/views/items/_form.html.erb:10: syntax error, unexpected keyword_ensure, expecting end-of-input
+  app/views/users/show.html.erb:12:in `_app_views_users_show_html_erb__2475862723174439956_70355882808840'
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (14.1ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.5ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (102.4ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-03-05 10:28:09 -0500
+Processing by Devise::SessionsController#new as HTML
+  [1m[35mUser Load (5.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 5.1ms)
+
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"users", :id=>nil} missing required keys: [:id]):
+  app/controllers/application_controller.rb:15:in `after_sign_in_path_for'
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (25.9ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.5ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.1ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (127.3ms)
+
+
+Started GET "/" for ::1 at 2016-03-05 10:28:13 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 220ms (Views: 217.5ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-03-05 10:28:16 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"k/W9RYNKa4CdOVhi5yIoMe2rqT6FH1BFmfNgE65KAJ60uNx5JV0mk3GauHH7jY0VrPCZSDjdKAiYOmfEEJGFlg=="}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36m (1.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 18ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2016-03-05 10:28:16 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 84ms (Views: 82.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-03-05 10:28:20 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (22.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (115.0ms)
+Completed 200 OK in 248ms (Views: 241.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-03-05 10:28:24 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DCohrmZuNW8HFhTVYbWpbkODA9dszivVLvwzqFjajeiclwed5xL2HFAt/fEJTcZPH6fS2YarBM7lyquGVdEavg==", "user"=>{"email"=>"ekeast328@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "ekeast328@gmail.com"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2016-03-05 15:27:19.134328"], ["current_sign_in_at", "2016-03-05 15:28:24.540028"], ["sign_in_count", 21], ["updated_at", "2016-03-05 15:28:24.541687"], ["id", 3]]
+  [1m[35m (1.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 127ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/users/3" for ::1 at 2016-03-05 10:28:24 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "items" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2016-03-05 15:28:24.585012"], ["updated_at", "2016-03-05 15:28:24.585012"]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  Rendered items/_form.html.erb (63.8ms)
+  Rendered users/show.html.erb within layouts/application (91.5ms)
+Completed 500 Internal Server Error in 99ms (ActiveRecord: 3.7ms)
+
+ActionView::Template::Error (undefined method `user_item_path' for #<#<Class:0x007ffa02861a38>:0x007ffa0212ab48>):
+    1: <h3>Add an item</h4>
+    2: <%= form_for [user, item] do |f| %>
+    3:   <div class="form-group">
+    4:     <%= f.label :name, class: 'sr-only' %>
+    5:     <%= f.text_field :name, class: 'form-control', placeholder: "Enter a new comment" %>
+  app/views/items/_form.html.erb:2:in `_app_views_items__form_html_erb___2086253075838004524_70355876600760'
+  app/views/users/show.html.erb:12:in `_app_views_users_show_html_erb__2475862723174439956_70355882808840'
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (15.5ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.8ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (115.5ms)
+
+
+Started GET "/" for ::1 at 2016-03-05 10:29:41 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+Completed 200 OK in 289ms (Views: 283.4ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-03-05 10:29:44 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"FiLA2zduepaSRSovBSZ9ph1QpHj1F/xBsmIx9SZ1mk6jeZr0BWbUnXfUcyiMs/PGc2O5VpsvMgf+KHaFglObTw=="}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 15ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2016-03-05 10:29:44 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 135ms (Views: 134.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-03-05 10:29:45 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (16.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (87.3ms)
+Completed 200 OK in 226ms (Views: 222.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-03-05 10:29:49 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dc5Y44bsO939TW8Q1GcZpFRsff45TNnQ7rpfOFObvNcEEJHV0AKlW1rJsVn5mgl7nHyDfzNCSx9v+7fe4vHncA==", "user"=>{"email"=>"ekeast328@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "ekeast328@gmail.com"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2016-03-05 15:28:24.540028"], ["current_sign_in_at", "2016-03-05 15:29:49.525376"], ["sign_in_count", 22], ["updated_at", "2016-03-05 15:29:49.527487"], ["id", 3]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 119ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/users/3" for ::1 at 2016-03-05 10:29:49 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "items" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2016-03-05 15:29:49.641279"], ["updated_at", "2016-03-05 15:29:49.641279"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  Rendered items/_form.html.erb (33.9ms)
+  Rendered users/show.html.erb within layouts/application (55.3ms)
+Completed 500 Internal Server Error in 64ms (ActiveRecord: 2.4ms)
+
+ActionView::Template::Error (undefined method `item_path' for #<#<Class:0x007ffa02861a38>:0x007ff9fab28558>):
+    1: <h3>Add an item</h4>
+    2: <%= form_for [item] do |f| %>
+    3:   <div class="form-group">
+    4:     <%= f.label :name, class: 'sr-only' %>
+    5:     <%= f.text_field :name, class: 'form-control', placeholder: "Enter a new comment" %>
+  app/views/items/_form.html.erb:2:in `_app_views_items__form_html_erb___2086253075838004524_70355813978560'
+  app/views/users/show.html.erb:12:in `_app_views_users_show_html_erb__2475862723174439956_70355882808840'
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.8ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.4ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (104.5ms)
+
+
+Started GET "/" for ::1 at 2016-03-05 10:30:26 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (2.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 278ms (Views: 272.2ms | ActiveRecord: 2.9ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-03-05 10:30:29 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"O1V2TBF5W2sMZEMzQnIXZZx57JoCeYaYtJIX5J0liGD8f69yRUjfVB5b4hOFVP2H7A9aHi4HxTmVUnqLB7zeDQ=="}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 14ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2016-03-05 10:30:29 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 126ms (Views: 124.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-03-05 10:30:30 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (16.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (86.9ms)
+Completed 200 OK in 224ms (Views: 220.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-03-05 10:30:36 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RJGMK4h/367VF9lB51c4lpO1x/WGs/9tCV3N3dngeMyZh3v9GwEv5x+gcK/xWgyxtqqZNJlKsAbBfg9hRq0LOw==", "user"=>{"email"=>"ekeast328@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "ekeast328@gmail.com"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2016-03-05 15:29:49.525376"], ["current_sign_in_at", "2016-03-05 15:30:36.408139"], ["sign_in_count", 23], ["updated_at", "2016-03-05 15:30:36.410162"], ["id", 3]]
+  [1m[35m (1.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 125ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/users/3" for ::1 at 2016-03-05 10:30:36 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "items" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2016-03-05 15:30:36.458152"], ["updated_at", "2016-03-05 15:30:36.458152"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  Rendered items/_form.html.erb (44.2ms)
+  Rendered users/show.html.erb within layouts/application (68.5ms)
+Completed 500 Internal Server Error in 77ms (ActiveRecord: 2.4ms)
+
+ActionView::Template::Error (undefined method `user_item_path' for #<#<Class:0x007ffa02861a38>:0x007ffa011c6620>):
+    1: <h3>Add an item</h4>
+    2: <%= form_for [user, item] do |f| %>
+    3:   <div class="form-group">
+    4:     <%= f.label :name, class: 'sr-only' %>
+    5:     <%= f.text_field :name, class: 'form-control', placeholder: "Enter a new comment" %>
+  app/views/items/_form.html.erb:2:in `_app_views_items__form_html_erb___2086253075838004524_70355869367000'
+  app/views/users/show.html.erb:12:in `_app_views_users_show_html_erb__2475862723174439956_70355882808840'
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (14.5ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.6ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (127.0ms)
+
+
+Started GET "/" for ::1 at 2016-03-05 10:52:59 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+  [1m[35mUser Load (25.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+Completed 200 OK in 362ms (Views: 276.3ms | ActiveRecord: 57.1ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-03-05 10:53:03 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4WJf8/6qeoLyt+550npo/jgI+VuAdwGhaP2uZTUz9Vfi3iiiFSMYKs97ZzeU+O2zXlIiZdU2lvCOc4ZD+HD1iw=="}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 17ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-03-05 10:53:03 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 77ms (Views: 76.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-03-05 10:53:04 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (15.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (43.4ms)
+Completed 200 OK in 161ms (Views: 149.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-03-05 10:53:08 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wluoKI/0DQ3Lt8VPAbU28h0XLTXERgHF+vu4FvFyR46QzSIFF68cqZH5vstJbbFjPBhqCt+KvjwM4MnZqoJbtg==", "user"=>{"email"=>"ekeast328@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (26.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "ekeast328@gmail.com"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2016-03-05 15:30:36.408139"], ["current_sign_in_at", "2016-03-05 15:53:09.036687"], ["sign_in_count", 24], ["updated_at", "2016-03-05 15:53:09.038659"], ["id", 3]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 168ms (ActiveRecord: 28.2ms)
+
+
+Started GET "/users/3" for ::1 at 2016-03-05 10:53:09 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "items" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2016-03-05 15:53:09.185100"], ["updated_at", "2016-03-05 15:53:09.185100"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  Rendered items/_form.html.erb (45.7ms)
+  Rendered users/show.html.erb within layouts/application (108.8ms)
+Completed 500 Internal Server Error in 123ms (ActiveRecord: 3.8ms)
+
+ActionView::Template::Error (undefined method `user_item_path' for #<#<Class:0x007ffa01a91db8>:0x007ffa01aa2078>):
+    1: <h3>Add an item</h4>
+    2: <%= form_for [user, item] do |f| %>
+    3:   <div class="form-group">
+    4:     <%= f.label :name, class: 'sr-only' %>
+    5:     <%= f.text_field :name, class: 'form-control', placeholder: "Enter a new comment" %>
+  app/views/items/_form.html.erb:2:in `_app_views_items__form_html_erb___2086253075838004524_70355869367000'
+  app/views/users/show.html.erb:12:in `_app_views_users_show_html_erb__2475862723174439956_70355873236800'
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (16.4ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.9ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (122.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_items_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_items_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_username' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_username' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+
+
+Started GET "/" for ::1 at 2016-03-05 11:08:48 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.9ms)
+  [1m[35mUser Load (12.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+Completed 200 OK in 1319ms (Views: 1211.1ms | ActiveRecord: 13.4ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-03-05 11:08:58 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"O/z53w5c6IEVDv++dMm+2jq/xDntVrklkmiHKuaieud0Kigd+gfQtdM5qGqSMlH4Le8ERbHOvwVrQSQLima5Lw=="}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 179ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2016-03-05 11:08:58 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 396ms (Views: 394.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-03-05 11:09:01 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (34.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (215.0ms)
+Completed 200 OK in 390ms (Views: 385.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-03-05 11:09:06 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"97YTPylNe6VG4QYorKtFumYqx6Mq2LCH/1Dl1Zp00mjePiNWtMrhVn9XznbvNO5ClMPyp4UZOBYQ3kFMPDoAng==", "user"=>{"email"=>"ekeast328@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (12.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "ekeast328@gmail.com"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2016-03-05 15:53:09.036687"], ["current_sign_in_at", "2016-03-05 16:09:07.421511"], ["sign_in_count", 25], ["updated_at", "2016-03-05 16:09:07.438745"], ["id", 3]]
+  [1m[36m (247.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 726ms (ActiveRecord: 261.6ms)
+
+
+Started GET "/users/3" for ::1 at 2016-03-05 11:09:07 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  Rendered items/_form.html.erb (3.5ms)
+  [1m[35mItem Load (28.2ms)[0m  SELECT "items".* FROM "items" WHERE "items"."user_id" = ?  [["user_id", 3]]
+  Rendered users/show.html.erb within layouts/application (216.8ms)
+Completed 200 OK in 395ms (Views: 314.8ms | ActiveRecord: 29.7ms)
+
+
+Started POST "/users/3/items" for ::1 at 2016-03-05 11:09:19 -0500
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Mjv/Lcx/wSjVvWBWfhl9bKt6Y3a5AsXrTUYuDr/muS0/EyRhaZmYLz66iIMMAlfeUUt6JmX1PoCmPg+irDgaaQ==", "item"=>{"name"=>"making a new item"}, "commit"=>"Submit Item", "user_id"=>"3"}
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `require_sign_in' for #<ItemsController:0x007fd8629b80d8>):
+  activesupport (4.2.5) lib/active_support/callbacks.rb:432:in `block in make_lambda'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:164:in `call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:164:in `block in halting'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:504:in `call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:504:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:504:in `each'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:504:in `call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.5) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.5) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.5) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.5) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.5) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.5) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.5) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:76:in `call'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  warden (1.2.6) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.6) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.6) lib/warden/manager.rb:34:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.5) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.0ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.8ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (137.7ms)
+
+
+Started GET "/" for ::1 at 2016-03-05 11:10:12 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (17.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 310ms (Views: 270.9ms | ActiveRecord: 19.0ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-03-05 11:10:16 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"joaZiLsuZ7g0f0Icr49pdPbA2ONPS+sIcsjoqIFrixyDrkLEHsg+v994qsndlEPGDPHBs5O8EGOZsMkEkrUoWA=="}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 11ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-03-05 11:10:16 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 122ms (Views: 121.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-03-05 11:10:18 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (14.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (40.1ms)
+Completed 200 OK in 126ms (Views: 123.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-03-05 11:10:23 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DHlSqePu9ZTYR4cE5Zl6XR4Ub5RjqMXJ8OREi73pCJrhD58oxjYxvG27c+IPLyyOHHiwamYVxDpAap51fwwrNA==", "user"=>{"email"=>"ekeast328@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (23.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "ekeast328@gmail.com"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2016-03-05 16:09:07.421511"], ["current_sign_in_at", "2016-03-05 16:10:23.742029"], ["sign_in_count", 26], ["updated_at", "2016-03-05 16:10:23.744610"], ["id", 3]]
+  [1m[35m (1.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 158ms (ActiveRecord: 25.1ms)
+
+
+Started GET "/users/3" for ::1 at 2016-03-05 11:10:23 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  Rendered items/_form.html.erb (4.7ms)
+  [1m[36mItem Load (0.5ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."user_id" = ?[0m  [["user_id", 3]]
+  Rendered users/show.html.erb within layouts/application (49.4ms)
+Completed 200 OK in 154ms (Views: 148.7ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/users/3/items" for ::1 at 2016-03-05 11:10:29 -0500
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T0skcpfR407qiyEgxkpc9oLXVd27XTsM+Rhahyy6SNPW1CjMk3Wao2U9FS4js3OnRHrD75fwkbwQr3lnfX+4bg==", "item"=>{"name"=>"adding a new item"}, "commit"=>"Submit Item", "user_id"=>"3"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35m (4.3ms)[0m  begin transaction
+  [1m[36mSQL (16.5ms)[0m  [1mINSERT INTO "items" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adding a new item"], ["user_id", 3], ["created_at", "2016-03-05 16:10:29.609910"], ["updated_at", "2016-03-05 16:10:29.609910"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 101ms (ActiveRecord: 22.5ms)
+
+
+Started GET "/users/3" for ::1 at 2016-03-05 11:10:29 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  Rendered items/_form.html.erb (3.4ms)
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."user_id" = ?[0m  [["user_id", 3]]
+  Rendered items/_item.html.erb (2.4ms)
+  Rendered users/show.html.erb within layouts/application (43.5ms)
+Completed 200 OK in 167ms (Views: 165.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/3/items" for ::1 at 2016-03-05 11:10:40 -0500
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Pj38sQiIY/yXP1bdp8qXs1c5ccUa9YiEzSOvT9tg89mnovAPDCwaERiJYtNCM7jikZTn9zZYIjQklIyviqUDZA==", "item"=>{"name"=>"Here is my new item"}, "commit"=>"Submit Item", "user_id"=>"3"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "items" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Here is my new item"], ["user_id", 3], ["created_at", "2016-03-05 16:10:40.630304"], ["updated_at", "2016-03-05 16:10:40.630304"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 12ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/users/3" for ::1 at 2016-03-05 11:10:40 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  Rendered items/_form.html.erb (2.2ms)
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."user_id" = ?[0m  [["user_id", 3]]
+  Rendered items/_item.html.erb (0.5ms)
+  Rendered items/_item.html.erb (0.2ms)
+  Rendered users/show.html.erb within layouts/application (75.2ms)
+Completed 200 OK in 154ms (Views: 151.7ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-03-05 11:22:54 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"nHenDMA/QMhNF24m99/OFAXfJuS8IjA29zPHbSsA2F4F6KuyxJs5JcKhWigSJuFFw3Kw1pCPmoYehOSNesUo4w=="}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 59ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/" for ::1 at 2016-03-05 11:22:55 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 197ms (Views: 195.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-03-05 11:23:00 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (12.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (50.6ms)
+Completed 200 OK in 133ms (Views: 130.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-03-05 11:23:03 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"APlcVzQxVGHBq1yYxAewv3l2dqkg0ZZAt/tcZ+er7HLDohvTQXnVEt+m24dAalouqkC1CpWFmSXVjEQrDwBhPw==", "user"=>{"email"=>"ekeast328@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (9.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "ekeast328@gmail.com"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2016-03-05 16:10:23.742029"], ["current_sign_in_at", "2016-03-05 16:23:03.907615"], ["sign_in_count", 27], ["updated_at", "2016-03-05 16:23:03.909324"], ["id", 3]]
+  [1m[35m (1.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 124ms (ActiveRecord: 11.2ms)
+
+
+Started GET "/users/3" for ::1 at 2016-03-05 11:23:03 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  Rendered items/_form.html.erb (12.5ms)
+  [1m[36mItem Load (0.6ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."user_id" = ?[0m  [["user_id", 3]]
+  Rendered items/_item.html.erb (0.8ms)
+  Rendered items/_item.html.erb (0.4ms)
+  Rendered users/show.html.erb within layouts/application (79.1ms)
+Completed 200 OK in 155ms (Views: 149.4ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/users/3/items" for ::1 at 2016-03-05 11:29:42 -0500
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RpvDFJaQIMI3/5MS0vKa0T3bK3k+4Jz63mmCYrQ8TaJlNiSsJ+/i8qKYe8oytc8hf4aWBVl+SkCoOoH7ljOcYg==", "item"=>{"name"=>"asdfasdfad"}, "commit"=>"Submit Item", "user_id"=>"3"}
+  [1m[35mUser Load (88.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mSQL (29.0ms)[0m  [1mINSERT INTO "items" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "asdfasdfad"], ["user_id", 3], ["created_at", "2016-03-05 16:29:43.163902"], ["updated_at", "2016-03-05 16:29:43.163902"]]
+  [1m[35m (26.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 208ms (ActiveRecord: 143.6ms)
+
+
+Started GET "/users/3" for ::1 at 2016-03-05 11:29:43 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  Rendered items/_form.html.erb (17.5ms)
+  [1m[36mItem Load (0.3ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."user_id" = ?[0m  [["user_id", 3]]
+  Rendered items/_item.html.erb (1.1ms)
+  Rendered items/_item.html.erb (0.5ms)
+  Rendered items/_item.html.erb (0.5ms)
+  Rendered users/show.html.erb within layouts/application (75.9ms)
+Completed 200 OK in 510ms (Views: 507.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/3" for ::1 at 2016-03-05 11:33:56 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (11.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  Rendered items/_form.html.erb (17.8ms)
+  [1m[35mItem Load (0.3ms)[0m  SELECT "items".* FROM "items" WHERE "items"."user_id" = ?  [["user_id", 3]]
+  Rendered users/show.html.erb within layouts/application (205.1ms)
+Completed 500 Internal Server Error in 289ms (ActiveRecord: 12.3ms)
+
+ActionView::Template::Error (undefined method `sort_by' for nil:NilClass):
+    15:       <div>
+    16:         <h3>Activities</h3>
+    17:         <% @user.items.each do |item| %>
+    18:           <%= render partial: 'items/item', locals: {item: item}, :collection => @events.sort_by(&:event_at).reverse %>
+    19:         <% end %>
+    20:       </div>
+    21:   </div>
+  app/views/users/show.html.erb:18:in `block in _app_views_users_show_html_erb__2981117917305344721_70283675512960'
+  app/views/users/show.html.erb:17:in `_app_views_users_show_html_erb__2981117917305344721_70283675512960'
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (14.0ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.4ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (115.1ms)
+
+
+Started GET "/users/3" for ::1 at 2016-03-05 11:34:25 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (15.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  Rendered items/_form.html.erb (9.5ms)
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."user_id" = ?[0m  [["user_id", 3]]
+  Rendered users/show.html.erb within layouts/application (64.5ms)
+Completed 500 Internal Server Error in 157ms (ActiveRecord: 16.3ms)
+
+ActionView::Template::Error (undefined method `sort_by' for nil:NilClass):
+    15:       <div>
+    16:         <h3>Activities</h3>
+    17:         <% @user.items.each do |item| %>
+    18:           <%= render partial: 'items/item', locals: {item: item}, :collection => @items.sort_by(&:item_at).reverse %>
+    19:         <% end %>
+    20:       </div>
+    21:   </div>
+  app/views/users/show.html.erb:18:in `block in _app_views_users_show_html_erb__2981117917305344721_70283663444680'
+  app/views/users/show.html.erb:17:in `_app_views_users_show_html_erb__2981117917305344721_70283663444680'
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.2ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.8ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (115.1ms)
+
+
+Started GET "/" for ::1 at 2016-03-05 11:35:09 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+  [1m[35mUser Load (13.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+Completed 200 OK in 378ms (Views: 359.2ms | ActiveRecord: 13.0ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-03-05 11:35:13 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"+fuzRXgQfEVWxlB0jO/mOiYs+bicyPJfD/1VVkWV5CDaVlT9yW++dcOhuKxsqLPKZHFExPtWJOV5rlbPZ5o14A=="}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 15ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2016-03-05 11:35:13 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 101ms (Views: 99.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-03-05 11:35:15 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (14.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (74.6ms)
+Completed 200 OK in 175ms (Views: 172.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-03-05 11:35:18 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CbFqh9REtUJuYJcTeLzomM3rca6Hg6xFgWDx97xIY/ecNaiMf4Drg57YXSSr0mPmdMnxwMF0PFmbX7u1X8pTzg==", "user"=>{"email"=>"ekeast328@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (16.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "ekeast328@gmail.com"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2016-03-05 16:23:03.907615"], ["current_sign_in_at", "2016-03-05 16:35:18.937018"], ["sign_in_count", 28], ["updated_at", "2016-03-05 16:35:18.947902"], ["id", 3]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 166ms (ActiveRecord: 18.2ms)
+
+
+Started GET "/users/3" for ::1 at 2016-03-05 11:35:18 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  Rendered items/_form.html.erb (5.5ms)
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items" WHERE "items"."user_id" = ?  [["user_id", 3]]
+  Rendered users/show.html.erb within layouts/application (32.9ms)
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 0.6ms)
+
+ActionView::Template::Error (undefined method `order' for nil:NilClass):
+    15:       <div>
+    16:         <h3>Activities</h3>
+    17:         <% @user.items.each do |item| %>
+    18:           <%= render partial: 'items/item', locals: {item: item}, :collection => @items.order(:item_at).reverse_order %>
+    19:         <% end %>
+    20:       </div>
+    21:   </div>
+  app/views/users/show.html.erb:18:in `block in _app_views_users_show_html_erb__2981117917305344721_70283620627220'
+  app/views/users/show.html.erb:17:in `_app_views_users_show_html_erb__2981117917305344721_70283620627220'
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.2ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.4ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (105.9ms)
+
+
+Started GET "/" for ::1 at 2016-03-05 11:37:41 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 360ms (Views: 347.1ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-03-05 11:37:43 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"pAOs+y7rMjSU2x81v9xMhzMHtoN0/iCfEK6exMvbxCNQxKce7dTTgV7Q5LqQvyCZxTNE5yfROUJiu+Y5zw+gWQ=="}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 19ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2016-03-05 11:37:43 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 115ms (Views: 113.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-03-05 11:37:45 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (14.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (75.2ms)
+Completed 200 OK in 210ms (Views: 207.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-03-05 11:37:49 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KV1+UL3E07m+ZU3Zbsrw+tEp+/4/EIf19fsJFWEmbwW1ta1/xHPov0vfQut58wj6X15pHRGW3lySX+9zyrVZ4g==", "user"=>{"email"=>"ekeast328@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "ekeast328@gmail.com"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2016-03-05 16:35:18.937018"], ["current_sign_in_at", "2016-03-05 16:37:49.238507"], ["sign_in_count", 29], ["updated_at", "2016-03-05 16:37:49.240005"], ["id", 3]]
+  [1m[35m (1.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 165ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/users/3" for ::1 at 2016-03-05 11:37:49 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  Rendered items/_form.html.erb (2.3ms)
+  Rendered users/show.html.erb within layouts/application (18.8ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined method `order' for nil:NilClass):
+    14:         <% end %>
+    15:       <div>
+    16:         <h3>Activities</h3>
+    17:         <% @items.order('items.item_at DESC') %>
+    18:         <% @user.items.each do |item| %>
+    19:           <%= render partial: 'items/item', locals: {item: item} %>
+    20:         <% end %>
+  app/views/users/show.html.erb:17:in `_app_views_users_show_html_erb__2981117917305344721_70283675411600'
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.2ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.8ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (119.8ms)
