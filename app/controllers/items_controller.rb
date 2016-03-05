@@ -3,9 +3,7 @@ class ItemsController < ApplicationController
   @items = Item.all
 
   def create
-    @user = User.find(params[:user_id])
-    @item = @user.items.new(item_params)
-    @item.user = current_user
+    @item = current_user.items.new(item_params)
     if @item.save
       flash[:notice] = "Activity was saved."
       redirect_to user_path(@user)
