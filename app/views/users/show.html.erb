@@ -10,13 +10,20 @@
         <p>Username: <%= current_user.username %></p>
         <p>E-Mail Address: <%= current_user.email %></p>
         <% if current_user %>
-        <%= render 'items/form', item: Item.new, user: @user %>
+          <div class='new-item'>
+            <%= render 'items/form', item: Item.new, user: current_user %>
+          </div>
         <% end %>
       <div>
         <h3>Activities</h3>
+        <small>
+          <div class='js-items-count'><%= pluralize(current_user.items.count, 'item') %></div>
+       </small>
         <% @user.items.each do |item| %>
-          <%= render partial: 'items/item', locals: {item: item} %>
+         <div class='js-items'>
+            <%= render partial: 'items/item', locals: {item: item} %>
+         </div>
         <% end %>
       </div>
-  </div>
+    </div>
 </div>
