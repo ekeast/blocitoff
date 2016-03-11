@@ -1,29 +1,25 @@
 <div class="row">
   <div class="col-md-8">
       <br />
-        <div class="media-left">
+        <div class="jumbotron">
           <h2>Welcome to Blocitoff</h2>
-          <p>You are about to undergo a life transformation through Blocitoff. Are you excited? You should be.
-
-            <br />Blocitoff is going to change the way you learn, laugh, love, and live.</p>
+          <p class="lead">You are about to undergo a life transformation with Blocitoff. Are you excited? You should be.
+            Blocitoff is going to change the way you learn, laugh, love, and live. Start adding activities to your to-do list below.</p>
         </div>
-        <p>Username: <%= current_user.username %></p>
-        <p>E-Mail Address: <%= current_user.email %></p>
+        <p><strong>Your Username:</strong> <%= current_user.username %></p>
+        <p><strong>E-Mail Address:</strong> <%= current_user.email %></p>
         <% if current_user %>
           <div class='new-item'>
             <%= render 'items/form', item: Item.new, user: current_user %>
           </div>
         <% end %>
       <div>
-        <h3>Activities</h3>
+        <h3>Your To-Do List</h3>
         <small>
           <div class='js-items-count'><%= pluralize(current_user.items.count, 'item') %></div>
        </small>
-        <% @user.items.each do |item| %>
-         <div class='js-items'>
-            <%= render partial: 'items/item', locals: {item: item} %>
-         </div>
-        <% end %>
-      </div>
+        <div class='js-items'>
+          <%= render current_user.items %>
+        </div>
     </div>
 </div>

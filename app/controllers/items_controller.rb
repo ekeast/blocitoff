@@ -1,11 +1,20 @@
 class ItemsController < ApplicationController
+  require 'rufus-scheduler'
+
+  scheduler = Rufus::Scheduler.new
+
+  scheduler.cron '5 0 * * *' do
+    rake todo:delete_items
+  end
 
   @items = Item.all
+
+
 
   def create
     @item = current_user.items.new(item_params)
     @new_item = Item.new
-    
+
     if @item.save
       flash[:notice] = "Activity was saved."
     else

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160305135939) do
+ActiveRecord::Schema.define(version: 20160309150549) do
 
   create_table "items", force: :cascade do |t|
     t.string   "name"
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 20160305135939) do
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
     t.string   "unconfirmed_email"
+    t.boolean  "is_public"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
