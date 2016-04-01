@@ -1,7 +1,9 @@
 <%= content_tag :div, class: 'media', id: "item-#{item.id}" do %>
 <div class="media">
   <div class="media-body">
+    <span class="rest-in-place" data-formtype="input" data-attribute="name">
     <p><%= item.name %> </p>
+  </span>
     <small>
       added <%= distance_of_time_in_words(item.created_at, Time.now, options = {}) %> ago
     | <%= link_to "Activity Completed", [current_user, item], method: :delete, remote: true, class: 'glyphicon' %>

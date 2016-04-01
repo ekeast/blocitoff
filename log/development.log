@@ -42368,3 +42368,1280 @@ Completed 200 OK in 412ms (Views: 376.8ms | ActiveRecord: 0.0ms)
   [1m[35m (5.5ms)[0m  begin transaction
   [1m[36mSQL (18.1ms)[0m  [1mUPDATE "items" SET "created_at" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["created_at", "2016-03-03 18:55:29.919106"], ["updated_at", "2016-03-11 18:55:34.314121"], ["id", 3]]
   [1m[35m (1.3ms)[0m  commit transaction
+
+
+Started GET "/" for ::1 at 2016-03-12 12:03:42 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (19.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.6ms)
+  [1m[35mUser Load (12.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+Completed 200 OK in 9224ms (Views: 9147.6ms | ActiveRecord: 13.3ms)
+
+
+Started GET "/assets/rest_in_place/rest_in_place.self-550e35954572d9b4c673dd484b8299d0a2539f9d44f2b7029186dd960a8f9569.js?body=1" for ::1 at 2016-03-12 12:03:53 -0500
+
+
+Started GET "/assets/rest_in_place/index.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2016-03-12 12:03:53 -0500
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2016-03-12 12:03:53 -0500
+
+
+Started GET "/users/6" for ::1 at 2016-03-12 12:03:56 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 6]]
+  Rendered items/_form.html.erb (1143.8ms)
+  [1m[35m (19.8ms)[0m  SELECT COUNT(*) FROM "items" WHERE "items"."user_id" = ?  [["user_id", 6]]
+  [1m[36mItem Load (41.2ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."user_id" = ?  ORDER BY updated_at DESC[0m  [["user_id", 6]]
+  Rendered items/_item.html.erb (3.4ms)
+  Rendered users/show.html.erb within layouts/application (1375.8ms)
+Completed 200 OK in 1487ms (Views: 1422.4ms | ActiveRecord: 61.4ms)
+
+
+Started DELETE "/users/6/items/174" for ::1 at 2016-03-12 12:04:04 -0500
+
+SyntaxError (/Users/admin/bloc/blocitoff/app/controllers/items_controller.rb:25: syntax error, unexpected ',', expecting =>
+      render json: {"Error update failed", status 400}, status:400
+                                          ^):
+  app/controllers/items_controller.rb:25: syntax error, unexpected ',', expecting =>
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.3ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.0ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.6ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (129.1ms)
+
+
+Started DELETE "/users/6/items/174" for ::1 at 2016-03-12 12:04:09 -0500
+
+SyntaxError (/Users/admin/bloc/blocitoff/app/controllers/items_controller.rb:25: syntax error, unexpected ',', expecting =>
+      render json: {"Error update failed", status 400}, status:400
+                                          ^):
+  app/controllers/items_controller.rb:25: syntax error, unexpected ',', expecting =>
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.9ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.7ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.5ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (105.5ms)
+
+
+Started GET "/users/6" for ::1 at 2016-03-12 12:04:12 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  Rendered items/_form.html.erb (2.2ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "items" WHERE "items"."user_id" = ?[0m  [["user_id", 6]]
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."user_id" = ?  ORDER BY updated_at DESC  [["user_id", 6]]
+  Rendered items/_item.html.erb (1.9ms)
+  Rendered users/show.html.erb within layouts/application (26.1ms)
+Completed 200 OK in 116ms (Views: 112.9ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/6/items/174" for ::1 at 2016-03-12 12:04:15 -0500
+
+SyntaxError (/Users/admin/bloc/blocitoff/app/controllers/items_controller.rb:25: syntax error, unexpected ',', expecting =>
+      render json: {"Error update failed", status 400}, status:400
+                                          ^):
+  app/controllers/items_controller.rb:25: syntax error, unexpected ',', expecting =>
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.6ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.8ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.9ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (108.1ms)
+
+
+Started POST "/users/6/items" for ::1 at 2016-03-12 12:04:25 -0500
+
+SyntaxError (/Users/admin/bloc/blocitoff/app/controllers/items_controller.rb:25: syntax error, unexpected ',', expecting =>
+      render json: {"Error update failed", status 400}, status:400
+                                          ^):
+  app/controllers/items_controller.rb:25: syntax error, unexpected ',', expecting =>
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.7ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.8ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (8.5ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (111.4ms)
+
+
+Started POST "/users/6/items" for ::1 at 2016-03-12 12:04:59 -0500
+
+SyntaxError (/Users/admin/bloc/blocitoff/app/controllers/items_controller.rb:25: syntax error, unexpected ',', expecting =>
+      render json: {"Error update failed", status 400}, status:400
+                                          ^):
+  app/controllers/items_controller.rb:25: syntax error, unexpected ',', expecting =>
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.5ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (3.6ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (2.3ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (235.2ms)
+
+
+Started GET "/users/6" for ::1 at 2016-03-12 12:05:01 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (6.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 6]]
+  Rendered items/_form.html.erb (11.3ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "items" WHERE "items"."user_id" = ?  [["user_id", 6]]
+  [1m[36mItem Load (0.3ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."user_id" = ?  ORDER BY updated_at DESC[0m  [["user_id", 6]]
+  Rendered items/_item.html.erb (6.0ms)
+  Rendered users/show.html.erb within layouts/application (159.8ms)
+Completed 200 OK in 609ms (Views: 566.1ms | ActiveRecord: 6.7ms)
+
+
+Started DELETE "/users/6/items/174" for ::1 at 2016-03-12 12:05:05 -0500
+
+SyntaxError (/Users/admin/bloc/blocitoff/app/controllers/items_controller.rb:25: syntax error, unexpected ',', expecting =>
+      render json: {"Error update failed", status 400}, status:400
+                                          ^):
+  app/controllers/items_controller.rb:25: syntax error, unexpected ',', expecting =>
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.9ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.2ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (2.9ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (142.7ms)
+
+
+Started GET "/" for ::1 at 2016-03-12 12:06:20 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.9ms)
+  [1m[35mUser Load (26.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+Completed 200 OK in 561ms (Views: 524.7ms | ActiveRecord: 26.0ms)
+
+
+Started GET "/users/6" for ::1 at 2016-03-12 12:06:28 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (18.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 6]]
+  Rendered items/_form.html.erb (10.0ms)
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "items" WHERE "items"."user_id" = ?  [["user_id", 6]]
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."user_id" = ?  ORDER BY updated_at DESC[0m  [["user_id", 6]]
+  Rendered items/_item.html.erb (7.4ms)
+  Rendered users/show.html.erb within layouts/application (78.8ms)
+Completed 200 OK in 287ms (Views: 263.2ms | ActiveRecord: 18.7ms)
+
+
+Started POST "/users/6/items" for ::1 at 2016-03-12 12:06:34 -0500
+
+SyntaxError (/Users/admin/bloc/blocitoff/app/controllers/items_controller.rb:25: syntax error, unexpected ',', expecting =>
+      render json: {"Error update failed", status 400}, status:400
+                                          ^):
+  app/controllers/items_controller.rb:25: syntax error, unexpected ',', expecting =>
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.2ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (3.5ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (108.9ms)
+
+
+Started POST "/users/6/items" for ::1 at 2016-03-12 12:08:38 -0500
+
+SyntaxError (/Users/admin/bloc/blocitoff/app/controllers/items_controller.rb:25: syntax error, unexpected ',', expecting =>
+      render json: {"Error update failed", status 400}, status:400
+                                          ^):
+  app/controllers/items_controller.rb:25: syntax error, unexpected ',', expecting =>
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.7ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.2ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (5.8ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (110.2ms)
+
+
+Started GET "/users/6" for ::1 at 2016-03-12 12:08:42 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mUser Load (47.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  Rendered items/_form.html.erb (4.7ms)
+  [1m[36m (0.9ms)[0m  [1mSELECT COUNT(*) FROM "items" WHERE "items"."user_id" = ?[0m  [["user_id", 6]]
+  [1m[35mItem Load (14.7ms)[0m  SELECT "items".* FROM "items" WHERE "items"."user_id" = ?  ORDER BY updated_at DESC  [["user_id", 6]]
+  Rendered items/_item.html.erb (4.0ms)
+  Rendered users/show.html.erb within layouts/application (150.0ms)
+Completed 200 OK in 641ms (Views: 493.5ms | ActiveRecord: 91.0ms)
+
+
+Started DELETE "/users/6/items/174" for ::1 at 2016-03-12 12:08:47 -0500
+
+SyntaxError (/Users/admin/bloc/blocitoff/app/controllers/items_controller.rb:25: syntax error, unexpected ',', expecting =>
+      render json: {"Error update failed", status 400}, status:400
+                                          ^):
+  app/controllers/items_controller.rb:25: syntax error, unexpected ',', expecting =>
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.6ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.9ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (2.2ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (107.6ms)
+
+
+Started GET "/users/6" for ::1 at 2016-03-12 12:10:43 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (19.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 6]]
+  Rendered items/_form.html.erb (8.2ms)
+  [1m[35m (11.4ms)[0m  SELECT COUNT(*) FROM "items" WHERE "items"."user_id" = ?  [["user_id", 6]]
+  [1m[36mItem Load (0.7ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."user_id" = ?  ORDER BY updated_at DESC[0m  [["user_id", 6]]
+  Rendered items/_item.html.erb (8.2ms)
+  Rendered users/show.html.erb within layouts/application (190.3ms)
+Completed 200 OK in 970ms (Views: 876.1ms | ActiveRecord: 33.4ms)
+
+
+Started DELETE "/users/6/items/174" for ::1 at 2016-03-12 12:10:48 -0500
+Processing by ItemsController#destroy as JS
+  Parameters: {"user_id"=>"6", "id"=>"174"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."user_id" = ? AND "items"."id" = ?  ORDER BY updated_at DESC LIMIT 1[0m  [["user_id", 6], ["id", 174]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (11.3ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 174]]
+  [1m[35m (302.0ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "items" WHERE "items"."user_id" = ?[0m  [["user_id", 6]]
+  Rendered items/destroy.js.erb (4.0ms)
+Completed 200 OK in 468ms (Views: 134.8ms | ActiveRecord: 314.1ms)
+
+
+Started POST "/users/6/items" for ::1 at 2016-03-12 12:10:54 -0500
+Processing by ItemsController#create as JS
+  Parameters: {"utf8"=>"✓", "item"=>{"name"=>"adsfasdf"}, "commit"=>"Submit Item", "user_id"=>"6"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (167.1ms)[0m  INSERT INTO "items" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "adsfasdf"], ["user_id", 6], ["created_at", "2016-03-12 17:10:54.103738"], ["updated_at", "2016-03-12 17:10:54.103738"]]
+  [1m[36m (41.7ms)[0m  [1mcommit transaction[0m
+  Rendered items/_item.html.erb (2.3ms)
+  Rendered items/_form.html.erb (4.2ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "items" WHERE "items"."user_id" = ?  [["user_id", 6]]
+  Rendered items/create.js.erb (54.1ms)
+Completed 200 OK in 320ms (Views: 85.0ms | ActiveRecord: 209.3ms)
+
+
+Started DELETE "/users/6/items/175" for ::1 at 2016-03-12 12:10:56 -0500
+Processing by ItemsController#destroy as JS
+  Parameters: {"user_id"=>"6", "id"=>"175"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mItem Load (0.1ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."user_id" = ? AND "items"."id" = ?  ORDER BY updated_at DESC LIMIT 1  [["user_id", 6], ["id", 175]]
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (11.0ms)[0m  DELETE FROM "items" WHERE "items"."id" = ?  [["id", 175]]
+  [1m[36m (229.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "items" WHERE "items"."user_id" = ?  [["user_id", 6]]
+  Rendered items/destroy.js.erb (1.4ms)
+Completed 200 OK in 289ms (Views: 41.0ms | ActiveRecord: 241.5ms)
+
+
+Started POST "/users/6/items" for ::1 at 2016-03-12 12:12:12 -0500
+
+SyntaxError (/Users/admin/bloc/blocitoff/app/controllers/items_controller.rb:25: syntax error, unexpected ',', expecting =>
+      render json: {"Error update failed", status 400}, status:400
+                                          ^):
+  app/controllers/items_controller.rb:25: syntax error, unexpected ',', expecting =>
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.1ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (2.2ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (117.9ms)
+
+
+Started GET "/users/6" for ::1 at 2016-03-12 12:16:33 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 6]]
+  Rendered items/_form.html.erb (10.0ms)
+  [1m[35m (7.4ms)[0m  SELECT COUNT(*) FROM "items" WHERE "items"."user_id" = ?  [["user_id", 6]]
+  [1m[36mItem Load (1.7ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."user_id" = ?  ORDER BY updated_at DESC[0m  [["user_id", 6]]
+  Rendered items/_item.html.erb (2.6ms)
+  Rendered users/show.html.erb within layouts/application (118.1ms)
+Completed 200 OK in 485ms (Views: 389.3ms | ActiveRecord: 12.8ms)
+
+
+Started DELETE "/users/6/items/173" for ::1 at 2016-03-12 12:16:38 -0500
+
+SyntaxError (/Users/admin/bloc/blocitoff/app/controllers/items_controller.rb:25: syntax error, unexpected tINTEGER, expecting keyword_do or '{' or '('
+...rror update failed", status 400}, status:400
+...                               ^):
+  app/controllers/items_controller.rb:25: syntax error, unexpected tINTEGER, expecting keyword_do or '{' or '('
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.5ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (2.2ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (107.6ms)
+
+
+Started POST "/users/6/items" for ::1 at 2016-03-12 12:16:40 -0500
+
+SyntaxError (/Users/admin/bloc/blocitoff/app/controllers/items_controller.rb:25: syntax error, unexpected tINTEGER, expecting keyword_do or '{' or '('
+...rror update failed", status 400}, status:400
+...                               ^):
+  app/controllers/items_controller.rb:25: syntax error, unexpected tINTEGER, expecting keyword_do or '{' or '('
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.0ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.1ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (2.0ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (118.8ms)
+
+
+Started POST "/users/6/items" for ::1 at 2016-03-12 12:17:19 -0500
+Processing by ItemsController#create as JS
+  Parameters: {"utf8"=>"✓", "item"=>{"name"=>"lol"}, "commit"=>"Submit Item", "user_id"=>"6"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (13.4ms)[0m  INSERT INTO "items" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "lol"], ["user_id", 6], ["created_at", "2016-03-12 17:17:19.499217"], ["updated_at", "2016-03-12 17:17:19.499217"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  Rendered items/_item.html.erb (3.3ms)
+  Rendered items/_form.html.erb (4.3ms)
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "items" WHERE "items"."user_id" = ?  [["user_id", 6]]
+  Rendered items/create.js.erb (32.5ms)
+Completed 200 OK in 190ms (Views: 75.4ms | ActiveRecord: 18.0ms)
+
+
+Started DELETE "/users/6/items/176" for ::1 at 2016-03-12 12:17:22 -0500
+Processing by ItemsController#destroy as JS
+  Parameters: {"user_id"=>"6", "id"=>"176"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mItem Load (0.2ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."user_id" = ? AND "items"."id" = ?  ORDER BY updated_at DESC LIMIT 1  [["user_id", 6], ["id", 176]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  DELETE FROM "items" WHERE "items"."id" = ?  [["id", 176]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "items" WHERE "items"."user_id" = ?  [["user_id", 6]]
+  Rendered items/destroy.js.erb (1.8ms)
+Completed 200 OK in 61ms (Views: 50.3ms | ActiveRecord: 3.1ms)
+
+
+Started DELETE "/users/6/items/173" for ::1 at 2016-03-12 12:17:23 -0500
+Processing by ItemsController#destroy as JS
+  Parameters: {"user_id"=>"6", "id"=>"173"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mItem Load (0.3ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."user_id" = ? AND "items"."id" = ?  ORDER BY updated_at DESC LIMIT 1  [["user_id", 6], ["id", 173]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.6ms)[0m  DELETE FROM "items" WHERE "items"."id" = ?  [["id", 173]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "items" WHERE "items"."user_id" = ?  [["user_id", 6]]
+  Rendered items/destroy.js.erb (1.8ms)
+Completed 200 OK in 51ms (Views: 34.8ms | ActiveRecord: 4.8ms)
+
+
+Started POST "/users/6/items" for ::1 at 2016-03-12 12:17:29 -0500
+Processing by ItemsController#create as JS
+  Parameters: {"utf8"=>"✓", "item"=>{"name"=>"okay lets see"}, "commit"=>"Submit Item", "user_id"=>"6"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (19.7ms)[0m  [1mINSERT INTO "items" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "okay lets see"], ["user_id", 6], ["created_at", "2016-03-12 17:17:29.240044"], ["updated_at", "2016-03-12 17:17:29.240044"]]
+  [1m[35m (40.5ms)[0m  commit transaction
+  Rendered items/_item.html.erb (1.1ms)
+  Rendered items/_form.html.erb (1.7ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "items" WHERE "items"."user_id" = ?[0m  [["user_id", 6]]
+  Rendered items/create.js.erb (27.2ms)
+Completed 200 OK in 132ms (Views: 57.9ms | ActiveRecord: 60.9ms)
+
+
+Started GET "/users/6" for ::1 at 2016-03-12 12:21:06 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  Rendered items/_form.html.erb (21.9ms)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "items" WHERE "items"."user_id" = ?[0m  [["user_id", 6]]
+  [1m[35mItem Load (0.5ms)[0m  SELECT "items".* FROM "items" WHERE "items"."user_id" = ?  ORDER BY updated_at DESC  [["user_id", 6]]
+  Rendered items/_item.html.erb (20.5ms)
+  Rendered users/show.html.erb within layouts/application (83.9ms)
+Completed 200 OK in 464ms (Views: 434.0ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/users/6/items" for ::1 at 2016-03-12 12:21:13 -0500
+Processing by ItemsController#create as JS
+  Parameters: {"utf8"=>"✓", "item"=>{"name"=>"lol uhhh"}, "commit"=>"Submit Item", "user_id"=>"6"}
+  [1m[36mUser Load (12.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.5ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "items" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "lol uhhh"], ["user_id", 6], ["created_at", "2016-03-12 17:21:13.723821"], ["updated_at", "2016-03-12 17:21:13.723821"]]
+  [1m[35m (28.1ms)[0m  commit transaction
+  Rendered items/_item.html.erb (2.5ms)
+  Rendered items/_form.html.erb (3.0ms)
+  [1m[36m (9.0ms)[0m  [1mSELECT COUNT(*) FROM "items" WHERE "items"."user_id" = ?[0m  [["user_id", 6]]
+  Rendered items/create.js.erb (78.1ms)
+Completed 200 OK in 201ms (Views: 120.3ms | ActiveRecord: 50.7ms)
+
+
+Started POST "/users/6/items" for ::1 at 2016-03-12 12:21:21 -0500
+Processing by ItemsController#create as JS
+  Parameters: {"utf8"=>"✓", "item"=>{"name"=>"adding again"}, "commit"=>"Submit Item", "user_id"=>"6"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36m (1.9ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "items" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "adding again"], ["user_id", 6], ["created_at", "2016-03-12 17:21:21.361040"], ["updated_at", "2016-03-12 17:21:21.361040"]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  Rendered items/_item.html.erb (1.1ms)
+  Rendered items/_form.html.erb (22.6ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "items" WHERE "items"."user_id" = ?  [["user_id", 6]]
+  Rendered items/create.js.erb (98.5ms)
+Completed 200 OK in 177ms (Views: 147.2ms | ActiveRecord: 5.3ms)
+
+
+Started DELETE "/users/6/items/179" for ::1 at 2016-03-12 12:21:24 -0500
+Processing by ItemsController#destroy as JS
+  Parameters: {"user_id"=>"6", "id"=>"179"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mItem Load (0.2ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."user_id" = ? AND "items"."id" = ?  ORDER BY updated_at DESC LIMIT 1  [["user_id", 6], ["id", 179]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  DELETE FROM "items" WHERE "items"."id" = ?  [["id", 179]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "items" WHERE "items"."user_id" = ?  [["user_id", 6]]
+  Rendered items/destroy.js.erb (2.2ms)
+Completed 200 OK in 64ms (Views: 53.9ms | ActiveRecord: 2.8ms)
+
+
+Started DELETE "/users/6/items/178" for ::1 at 2016-03-12 12:21:26 -0500
+Processing by ItemsController#destroy as JS
+  Parameters: {"user_id"=>"6", "id"=>"178"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mItem Load (0.1ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."user_id" = ? AND "items"."id" = ?  ORDER BY updated_at DESC LIMIT 1  [["user_id", 6], ["id", 178]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "items" WHERE "items"."id" = ?  [["id", 178]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "items" WHERE "items"."user_id" = ?  [["user_id", 6]]
+  Rendered items/destroy.js.erb (1.6ms)
+Completed 200 OK in 50ms (Views: 40.9ms | ActiveRecord: 2.8ms)
+
+
+Started DELETE "/users/6/items/177" for ::1 at 2016-03-12 12:21:30 -0500
+Processing by ItemsController#destroy as JS
+  Parameters: {"user_id"=>"6", "id"=>"177"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mItem Load (0.2ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."user_id" = ? AND "items"."id" = ?  ORDER BY updated_at DESC LIMIT 1  [["user_id", 6], ["id", 177]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "items" WHERE "items"."id" = ?  [["id", 177]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "items" WHERE "items"."user_id" = ?  [["user_id", 6]]
+  Rendered items/destroy.js.erb (2.3ms)
+Completed 200 OK in 53ms (Views: 44.3ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/users/6/items" for ::1 at 2016-03-12 12:21:33 -0500
+Processing by ItemsController#create as JS
+  Parameters: {"utf8"=>"✓", "item"=>{"name"=>"lollll"}, "commit"=>"Submit Item", "user_id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "items" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "lollll"], ["user_id", 6], ["created_at", "2016-03-12 17:21:33.471818"], ["updated_at", "2016-03-12 17:21:33.471818"]]
+  [1m[35m (22.2ms)[0m  commit transaction
+  Rendered items/_item.html.erb (1.0ms)
+  Rendered items/_form.html.erb (2.3ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "items" WHERE "items"."user_id" = ?[0m  [["user_id", 6]]
+  Rendered items/create.js.erb (26.4ms)
+Completed 200 OK in 88ms (Views: 56.5ms | ActiveRecord: 23.1ms)
+
+
+Started POST "/users/6/items" for ::1 at 2016-03-12 12:21:50 -0500
+Processing by ItemsController#create as JS
+  Parameters: {"utf8"=>"✓", "item"=>{"name"=>"is this working?"}, "commit"=>"Submit Item", "user_id"=>"6"}
+  [1m[35mUser Load (3.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.8ms)[0m  INSERT INTO "items" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "is this working?"], ["user_id", 6], ["created_at", "2016-03-12 17:21:50.857412"], ["updated_at", "2016-03-12 17:21:50.857412"]]
+  [1m[36m (13.4ms)[0m  [1mcommit transaction[0m
+  Rendered items/_item.html.erb (8.0ms)
+  Rendered items/_form.html.erb (6.9ms)
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "items" WHERE "items"."user_id" = ?  [["user_id", 6]]
+  Rendered items/create.js.erb (44.5ms)
+Completed 200 OK in 170ms (Views: 84.0ms | ActiveRecord: 20.3ms)
+
+
+Started POST "/users/6/items" for ::1 at 2016-03-12 12:21:54 -0500
+Processing by ItemsController#create as JS
+  Parameters: {"utf8"=>"✓", "item"=>{"name"=>"asdfasdf"}, "commit"=>"Submit Item", "user_id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "items" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "asdfasdf"], ["user_id", 6], ["created_at", "2016-03-12 17:21:54.852625"], ["updated_at", "2016-03-12 17:21:54.852625"]]
+  [1m[35m (3.9ms)[0m  commit transaction
+  Rendered items/_item.html.erb (1.1ms)
+  Rendered items/_form.html.erb (2.3ms)
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "items" WHERE "items"."user_id" = ?[0m  [["user_id", 6]]
+  Rendered items/create.js.erb (12.3ms)
+Completed 200 OK in 41ms (Views: 25.6ms | ActiveRecord: 5.1ms)
+
+
+Started DELETE "/users/6/items/182" for ::1 at 2016-03-12 12:21:58 -0500
+Processing by ItemsController#destroy as JS
+  Parameters: {"user_id"=>"6", "id"=>"182"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mItem Load (0.1ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."user_id" = ? AND "items"."id" = ?  ORDER BY updated_at DESC LIMIT 1[0m  [["user_id", 6], ["id", 182]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 182]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "items" WHERE "items"."user_id" = ?[0m  [["user_id", 6]]
+  Rendered items/destroy.js.erb (2.8ms)
+Completed 200 OK in 80ms (Views: 50.4ms | ActiveRecord: 2.7ms)
+
+
+Started DELETE "/users/6/items/181" for ::1 at 2016-03-12 12:22:01 -0500
+Processing by ItemsController#destroy as JS
+  Parameters: {"user_id"=>"6", "id"=>"181"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mItem Load (0.1ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."user_id" = ? AND "items"."id" = ?  ORDER BY updated_at DESC LIMIT 1[0m  [["user_id", 6], ["id", 181]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 181]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "items" WHERE "items"."user_id" = ?[0m  [["user_id", 6]]
+  Rendered items/destroy.js.erb (2.1ms)
+Completed 200 OK in 39ms (Views: 28.1ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/" for ::1 at 2016-03-12 12:22:59 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+Completed 200 OK in 262ms (Views: 252.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/6" for ::1 at 2016-03-12 12:23:05 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 6]]
+  Rendered items/_form.html.erb (3.9ms)
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "items" WHERE "items"."user_id" = ?  [["user_id", 6]]
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."user_id" = ?  ORDER BY updated_at DESC[0m  [["user_id", 6]]
+  Rendered items/_item.html.erb (4.8ms)
+  Rendered users/show.html.erb within layouts/application (50.2ms)
+Completed 200 OK in 442ms (Views: 382.8ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/users/6/items/180" for ::1 at 2016-03-12 12:23:07 -0500
+Processing by ItemsController#destroy as JS
+  Parameters: {"user_id"=>"6", "id"=>"180"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."user_id" = ? AND "items"."id" = ?  ORDER BY updated_at DESC LIMIT 1[0m  [["user_id", 6], ["id", 180]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (37.0ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 180]]
+  [1m[35m (35.8ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "items" WHERE "items"."user_id" = ?[0m  [["user_id", 6]]
+  Rendered items/destroy.js.erb (2.7ms)
+Completed 200 OK in 293ms (Views: 115.7ms | ActiveRecord: 73.6ms)
+
+
+Started POST "/users/6/items" for ::1 at 2016-03-12 12:23:13 -0500
+Processing by ItemsController#create as JS
+  Parameters: {"utf8"=>"✓", "item"=>{"name"=>"please baby"}, "commit"=>"Submit Item", "user_id"=>"6"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (101.5ms)[0m  INSERT INTO "items" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "please baby"], ["user_id", 6], ["created_at", "2016-03-12 17:23:14.900508"], ["updated_at", "2016-03-12 17:23:14.900508"]]
+  [1m[36m (264.1ms)[0m  [1mcommit transaction[0m
+  Rendered items/_item.html.erb (31.8ms)
+  Rendered items/_form.html.erb (10.2ms)
+  [1m[35m (23.7ms)[0m  SELECT COUNT(*) FROM "items" WHERE "items"."user_id" = ?  [["user_id", 6]]
+  Rendered items/create.js.erb (80.0ms)
+Completed 200 OK in 551ms (Views: 86.5ms | ActiveRecord: 389.8ms)
+
+
+Started POST "/users/6/items" for ::1 at 2016-03-12 12:23:15 -0500
+Processing by ItemsController#create as JS
+  Parameters: {"utf8"=>"✓", "item"=>{"name"=>"please baby"}, "commit"=>"Submit Item", "user_id"=>"6"}
+  [1m[36mUser Load (1.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "items" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "please baby"], ["user_id", 6], ["created_at", "2016-03-12 17:23:15.859165"], ["updated_at", "2016-03-12 17:23:15.859165"]]
+  [1m[35m (171.4ms)[0m  commit transaction
+  Rendered items/_item.html.erb (2.9ms)
+  Rendered items/_form.html.erb (1.5ms)
+  [1m[36m (100.6ms)[0m  [1mSELECT COUNT(*) FROM "items" WHERE "items"."user_id" = ?[0m  [["user_id", 6]]
+  Rendered items/create.js.erb (123.4ms)
+Completed 200 OK in 327ms (Views: 43.2ms | ActiveRecord: 274.3ms)
+
+
+Started DELETE "/users/6/items/184" for ::1 at 2016-03-12 12:23:18 -0500
+Processing by ItemsController#destroy as JS
+  Parameters: {"user_id"=>"6", "id"=>"184"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mItem Load (0.3ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."user_id" = ? AND "items"."id" = ?  ORDER BY updated_at DESC LIMIT 1[0m  [["user_id", 6], ["id", 184]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 184]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "items" WHERE "items"."user_id" = ?[0m  [["user_id", 6]]
+  Rendered items/destroy.js.erb (1.5ms)
+Completed 200 OK in 59ms (Views: 49.2ms | ActiveRecord: 2.6ms)
+
+
+Started DELETE "/users/6/items/183" for ::1 at 2016-03-12 12:23:19 -0500
+Processing by ItemsController#destroy as JS
+  Parameters: {"user_id"=>"6", "id"=>"183"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mItem Load (0.1ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."user_id" = ? AND "items"."id" = ?  ORDER BY updated_at DESC LIMIT 1[0m  [["user_id", 6], ["id", 183]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 183]]
+  [1m[35m (35.6ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "items" WHERE "items"."user_id" = ?[0m  [["user_id", 6]]
+  Rendered items/destroy.js.erb (1.5ms)
+Completed 200 OK in 82ms (Views: 40.2ms | ActiveRecord: 36.5ms)
+
+
+Started POST "/users/6/items" for ::1 at 2016-03-12 12:26:24 -0500
+Processing by ItemsController#create as JS
+  Parameters: {"utf8"=>"✓", "item"=>{"name"=>"asdfasdf"}, "commit"=>"Submit Item", "user_id"=>"6"}
+  [1m[35mUser Load (1.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36m (5.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "items" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "asdfasdf"], ["user_id", 6], ["created_at", "2016-03-12 17:26:24.491935"], ["updated_at", "2016-03-12 17:26:24.491935"]]
+  [1m[36m (4.4ms)[0m  [1mcommit transaction[0m
+  Rendered items/_item.html.erb (12.4ms)
+  Rendered items/_form.html.erb (11.5ms)
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "items" WHERE "items"."user_id" = ?  [["user_id", 6]]
+  Rendered items/create.js.erb (47.4ms)
+Completed 200 OK in 168ms (Views: 81.2ms | ActiveRecord: 12.1ms)
+
+
+Started DELETE "/users/6/items/185" for ::1 at 2016-03-12 12:26:30 -0500
+Processing by ItemsController#destroy as JS
+  Parameters: {"user_id"=>"6", "id"=>"185"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mItem Load (0.2ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."user_id" = ? AND "items"."id" = ?  ORDER BY updated_at DESC LIMIT 1  [["user_id", 6], ["id", 185]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "items" WHERE "items"."id" = ?  [["id", 185]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "items" WHERE "items"."user_id" = ?  [["user_id", 6]]
+  Rendered items/destroy.js.erb (2.0ms)
+Completed 200 OK in 70ms (Views: 60.5ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/users/6/items" for ::1 at 2016-03-12 12:26:33 -0500
+Processing by ItemsController#create as JS
+  Parameters: {"utf8"=>"✓", "item"=>{"name"=>"uhhhh"}, "commit"=>"Submit Item", "user_id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "items" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "uhhhh"], ["user_id", 6], ["created_at", "2016-03-12 17:26:33.768774"], ["updated_at", "2016-03-12 17:26:33.768774"]]
+  [1m[35m (4.3ms)[0m  commit transaction
+  Rendered items/_item.html.erb (1.9ms)
+  Rendered items/_form.html.erb (2.1ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "items" WHERE "items"."user_id" = ?[0m  [["user_id", 6]]
+  Rendered items/create.js.erb (12.8ms)
+Completed 200 OK in 46ms (Views: 33.2ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/users/6" for ::1 at 2016-03-12 12:26:40 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  Rendered items/_form.html.erb (2.0ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "items" WHERE "items"."user_id" = ?[0m  [["user_id", 6]]
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items" WHERE "items"."user_id" = ?  ORDER BY updated_at DESC  [["user_id", 6]]
+  Rendered items/_item.html.erb (2.1ms)
+  Rendered users/show.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 356ms (Views: 353.1ms | ActiveRecord: 0.6ms)
+
+
+Started PUT "/users/6" for ::1 at 2016-03-12 12:26:48 -0500
+
+ActionController::RoutingError (No route matches [PUT] "/users/6"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (2.7ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (56.7ms)
+
+
+Started PUT "/users/6" for ::1 at 2016-03-12 12:26:57 -0500
+
+ActionController::RoutingError (No route matches [PUT] "/users/6"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.4ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (30.3ms)
+
+
+Started POST "/users/6/items" for ::1 at 2016-03-12 12:27:00 -0500
+Processing by ItemsController#create as JS
+  Parameters: {"utf8"=>"✓", "item"=>{"name"=>"uhh"}, "commit"=>"Submit Item", "user_id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "items" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "uhh"], ["user_id", 6], ["created_at", "2016-03-12 17:27:00.045532"], ["updated_at", "2016-03-12 17:27:00.045532"]]
+  [1m[35m (3.1ms)[0m  commit transaction
+  Rendered items/_item.html.erb (1.0ms)
+  Rendered items/_form.html.erb (3.0ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "items" WHERE "items"."user_id" = ?[0m  [["user_id", 6]]
+  Rendered items/create.js.erb (34.4ms)
+Completed 200 OK in 107ms (Views: 94.0ms | ActiveRecord: 4.0ms)
+
+
+Started POST "/users/6/items" for ::1 at 2016-03-12 12:27:01 -0500
+Processing by ItemsController#create as JS
+  Parameters: {"utf8"=>"✓", "item"=>{"name"=>""}, "commit"=>"Submit Item", "user_id"=>"6"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.9ms)[0m  INSERT INTO "items" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", ""], ["user_id", 6], ["created_at", "2016-03-12 17:27:01.669341"], ["updated_at", "2016-03-12 17:27:01.669341"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  Rendered items/_item.html.erb (1.1ms)
+  Rendered items/_form.html.erb (5.3ms)
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "items" WHERE "items"."user_id" = ?  [["user_id", 6]]
+  Rendered items/create.js.erb (16.6ms)
+Completed 200 OK in 45ms (Views: 32.7ms | ActiveRecord: 6.1ms)
+
+
+Started PUT "/users/6" for ::1 at 2016-03-12 12:27:20 -0500
+
+ActionController::RoutingError (No route matches [PUT] "/users/6"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.4ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (35.9ms)
+
+
+Started PUT "/users/6" for ::1 at 2016-03-12 12:27:25 -0500
+
+ActionController::RoutingError (No route matches [PUT] "/users/6"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.1ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (34.4ms)
+
+
+Started PUT "/users/6" for ::1 at 2016-03-12 12:27:30 -0500
+
+ActionController::RoutingError (No route matches [PUT] "/users/6"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.1ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (31.9ms)
+
+
+Started PUT "/users/6" for ::1 at 2016-03-12 12:27:34 -0500
+
+ActionController::RoutingError (No route matches [PUT] "/users/6"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.6ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (37.9ms)
+
+
+Started DELETE "/users/6/items/188" for ::1 at 2016-03-12 12:27:39 -0500
+Processing by ItemsController#destroy as JS
+  Parameters: {"user_id"=>"6", "id"=>"188"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mItem Load (0.2ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."user_id" = ? AND "items"."id" = ?  ORDER BY updated_at DESC LIMIT 1  [["user_id", 6], ["id", 188]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "items" WHERE "items"."id" = ?  [["id", 188]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "items" WHERE "items"."user_id" = ?  [["user_id", 6]]
+  Rendered items/destroy.js.erb (1.8ms)
+Completed 200 OK in 57ms (Views: 48.0ms | ActiveRecord: 2.4ms)
+
+
+Started DELETE "/users/6/items/187" for ::1 at 2016-03-12 12:27:40 -0500
+Processing by ItemsController#destroy as JS
+  Parameters: {"user_id"=>"6", "id"=>"187"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mItem Load (0.7ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."user_id" = ? AND "items"."id" = ?  ORDER BY updated_at DESC LIMIT 1  [["user_id", 6], ["id", 187]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "items" WHERE "items"."id" = ?  [["id", 187]]
+  [1m[36m (70.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "items" WHERE "items"."user_id" = ?  [["user_id", 6]]
+  Rendered items/destroy.js.erb (2.2ms)
+Completed 200 OK in 136ms (Views: 56.0ms | ActiveRecord: 72.0ms)
+
+
+Started DELETE "/users/6/items/186" for ::1 at 2016-03-12 12:27:42 -0500
+Processing by ItemsController#destroy as JS
+  Parameters: {"user_id"=>"6", "id"=>"186"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mItem Load (0.1ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."user_id" = ? AND "items"."id" = ?  ORDER BY updated_at DESC LIMIT 1  [["user_id", 6], ["id", 186]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  DELETE FROM "items" WHERE "items"."id" = ?  [["id", 186]]
+  [1m[36m (4.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "items" WHERE "items"."user_id" = ?  [["user_id", 6]]
+  Rendered items/destroy.js.erb (2.1ms)
+Completed 200 OK in 59ms (Views: 45.7ms | ActiveRecord: 6.3ms)
+
+
+Started POST "/users/6/items" for ::1 at 2016-03-12 12:27:46 -0500
+Processing by ItemsController#create as JS
+  Parameters: {"utf8"=>"✓", "item"=>{"name"=>"okay we'll try this"}, "commit"=>"Submit Item", "user_id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mSQL (1.9ms)[0m  [1mINSERT INTO "items" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "okay we'll try this"], ["user_id", 6], ["created_at", "2016-03-12 17:27:46.293431"], ["updated_at", "2016-03-12 17:27:46.293431"]]
+  [1m[35m (4.6ms)[0m  commit transaction
+  Rendered items/_item.html.erb (1.4ms)
+  Rendered items/_form.html.erb (4.7ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "items" WHERE "items"."user_id" = ?[0m  [["user_id", 6]]
+  Rendered items/create.js.erb (14.6ms)
+Completed 200 OK in 82ms (Views: 40.0ms | ActiveRecord: 7.4ms)
+
+
+Started POST "/users/6/items" for ::1 at 2016-03-12 12:27:59 -0500
+Processing by ItemsController#create as JS
+  Parameters: {"utf8"=>"✓", "item"=>{"name"=>"tryting again"}, "commit"=>"Submit Item", "user_id"=>"6"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "items" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "tryting again"], ["user_id", 6], ["created_at", "2016-03-12 17:27:59.126586"], ["updated_at", "2016-03-12 17:27:59.126586"]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  Rendered items/_item.html.erb (1.3ms)
+  Rendered items/_form.html.erb (25.2ms)
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "items" WHERE "items"."user_id" = ?  [["user_id", 6]]
+  Rendered items/create.js.erb (35.7ms)
+Completed 200 OK in 68ms (Views: 53.9ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/users/6" for ::1 at 2016-03-12 12:28:30 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 6]]
+  Rendered items/_form.html.erb (1.8ms)
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "items" WHERE "items"."user_id" = ?  [["user_id", 6]]
+  [1m[36mItem Load (10.4ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."user_id" = ?  ORDER BY updated_at DESC[0m  [["user_id", 6]]
+  Rendered items/_item.html.erb (3.4ms)
+  Rendered users/show.html.erb within layouts/application (25.6ms)
+Completed 200 OK in 291ms (Views: 276.3ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/" for ::1 at 2016-03-12 13:06:33 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (13.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.2ms)
+  [1m[35mUser Load (12.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+Completed 200 OK in 1561ms (Views: 1463.3ms | ActiveRecord: 13.1ms)
+
+
+Started GET "/users/6" for ::1 at 2016-03-12 13:06:40 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 6]]
+  Rendered items/_form.html.erb (1545.3ms)
+  [1m[35m (25.6ms)[0m  SELECT COUNT(*) FROM "items" WHERE "items"."user_id" = ?  [["user_id", 6]]
+  [1m[36mItem Load (40.8ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."user_id" = ?  ORDER BY updated_at DESC[0m  [["user_id", 6]]
+  Rendered items/_item.html.erb (2.7ms)
+  Rendered users/show.html.erb within layouts/application (1910.9ms)
+Completed 200 OK in 2468ms (Views: 2386.7ms | ActiveRecord: 67.0ms)
+
+
+Started PUT "/users/6" for ::1 at 2016-03-12 13:06:50 -0500
+
+ActionController::RoutingError (No route matches [PUT] "/users/6"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.8ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (32.9ms)
+
+
+Started POST "/users/6/items" for ::1 at 2016-03-12 13:06:55 -0500
+Processing by ItemsController#create as JS
+  Parameters: {"utf8"=>"✓", "item"=>{"name"=>"lol oaky"}, "commit"=>"Submit Item", "user_id"=>"6"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (21.6ms)[0m  INSERT INTO "items" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "lol oaky"], ["user_id", 6], ["created_at", "2016-03-12 18:06:55.708614"], ["updated_at", "2016-03-12 18:06:55.708614"]]
+  [1m[36m (13.0ms)[0m  [1mcommit transaction[0m
+  Rendered items/_item.html.erb (2.9ms)
+  Rendered items/_form.html.erb (2.7ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "items" WHERE "items"."user_id" = ?  [["user_id", 6]]
+  Rendered items/create.js.erb (61.5ms)
+Completed 200 OK in 147ms (Views: 103.6ms | ActiveRecord: 35.1ms)
+
+
+Started PUT "/users/6" for ::1 at 2016-03-12 13:07:03 -0500
+
+ActionController::RoutingError (No route matches [PUT] "/users/6"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.9ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (31.1ms)
+
+
+Started PUT "/users/6" for ::1 at 2016-03-12 13:07:41 -0500
+
+ActionController::RoutingError (No route matches [PUT] "/users/6"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.4ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (46.0ms)
+
+
+Started GET "/" for ::1 at 2016-03-12 13:10:34 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.5ms)
+  [1m[35mUser Load (23.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+Completed 200 OK in 1336ms (Views: 1265.5ms | ActiveRecord: 24.4ms)
+
+
+Started GET "/users/6" for ::1 at 2016-03-12 13:10:38 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 6]]
+  Rendered items/_form.html.erb (1098.3ms)
+  [1m[35m (12.8ms)[0m  SELECT COUNT(*) FROM "items" WHERE "items"."user_id" = ?  [["user_id", 6]]
+  [1m[36mItem Load (0.5ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."user_id" = ?  ORDER BY updated_at DESC[0m  [["user_id", 6]]
+  Rendered items/_item.html.erb (2.7ms)
+  Rendered users/show.html.erb within layouts/application (1277.2ms)
+Completed 200 OK in 1380ms (Views: 1362.9ms | ActiveRecord: 13.8ms)
+
+
+Started PUT "/users/6" for ::1 at 2016-03-12 13:10:47 -0500
+
+ActionController::RoutingError (No route matches [PUT] "/users/6"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.8ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (32.8ms)
+
+
+Started PUT "/users/6" for ::1 at 2016-03-12 13:10:53 -0500
+
+ActionController::RoutingError (No route matches [PUT] "/users/6"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.8ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (32.3ms)
+
+
+Started GET "/users/6" for ::1 at 2016-03-12 13:12:05 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  Rendered items/_form.html.erb (5.6ms)
+  [1m[36m (11.9ms)[0m  [1mSELECT COUNT(*) FROM "items" WHERE "items"."user_id" = ?[0m  [["user_id", 6]]
+  [1m[35mItem Load (0.6ms)[0m  SELECT "items".* FROM "items" WHERE "items"."user_id" = ?  ORDER BY updated_at DESC  [["user_id", 6]]
+  Rendered items/_item.html.erb (3.8ms)
+  Rendered users/show.html.erb within layouts/application (67.1ms)
+Completed 200 OK in 324ms (Views: 276.3ms | ActiveRecord: 14.8ms)
+
+
+Started PUT "/users/6" for ::1 at 2016-03-12 13:12:09 -0500
+
+ActionController::RoutingError (No route matches [PUT] "/users/6"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.1ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (37.6ms)
+
+
+Started PUT "/users/6" for ::1 at 2016-03-12 13:12:13 -0500
+
+ActionController::RoutingError (No route matches [PUT] "/users/6"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.5ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (30.7ms)
+
+
+Started PUT "/users/6" for ::1 at 2016-03-12 13:12:15 -0500
+
+ActionController::RoutingError (No route matches [PUT] "/users/6"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/admin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.4ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (28.9ms)

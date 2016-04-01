@@ -16,6 +16,21 @@ class ItemsController < ApplicationController
     end
   end
 
+  def update
+    @item = current_user.find(params[:id])
+
+    if @item.save
+      render json: @item.to_json, status: 200
+    else
+      render json: {error: "Error update failed", status: 400}, status:400
+    end
+
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  end
+
   def destroy
     @item = current_user.items.find(params[:id])
     if @item.destroy
